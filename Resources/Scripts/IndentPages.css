@@ -1,0 +1,33 @@
+.indent {
+    margin-left: 2vw;
+}
+
+.TopIndent {
+    margin-top: 2vh; 
+}
+
+.DoubleIndent {
+    margin-left: 4vw; 
+}
+
+.DoubleTopIndent {
+    margin-top: 4vh; 
+}
+
+/*
+.indent {
+    margin-left: 20px;
+}
+
+.TopIndent {
+    margin-top: 20px; 
+}
+
+.DoubleIndent {
+    margin-left: 40px; 
+}
+
+.DoubleTopIndent {
+    margin-top: 40px; 
+}
+*/
