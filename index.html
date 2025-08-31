@@ -155,6 +155,20 @@
     </style>
 </head>
 <body>
+                <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'false') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = 'main.html';
+        }
+    </script>
 
     <div class="content-container">
         <p class="message-text">Hello User, please click the button below to type your password:</p>
