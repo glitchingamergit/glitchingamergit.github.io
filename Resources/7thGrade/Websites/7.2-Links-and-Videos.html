@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Scripts/YoutubeColors.css">
+    <link rel="stylesheet" href="../../Scripts/IndentPages.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico">
+    <title>7.2 Links and Videos</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome) {
+                window.location.href = '../../../../unsupported.html';
+            }
+        });
+    </script>
+</head>
+<body>
+            <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'true') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = '../../../../index.html';
+        }
+    </script>
+    <button onclick="window.location.href='../seven.html'">Back</button>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="../../Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+    <h1>Illustrative Mathematics: Introducing Proportional Relationships</h1>
+    <p>Note: If the videos are a little pixely, then hover over the video and click on the gear icon on the bottom right and click on "Quality" and then, click on "720p." It may not be there if your device doesn't support it, so check if it does.</p>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dDlciqF8ypM" title="VLS G7U2V1 Representing Proportional Relationships with Tables" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PzWLuITB1gU" title="VLS G7U2V2 Representing Proportional Relationships with Equations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jxbTWg-m6Oo" title="VLS G7U2V3 Comparing Proportional and Nonproportional Relationships" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oZAi6SBMGjc" title="VLS G7U2V4 Representing Proportional Relationships with Graphs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h1>IXL Skill Lessons</h1>
+    <div>
+        <a href="https://www.ixl.com/math/grade-7/find-the-constant-of-proportionality-from-a-table" target="_blank"><button class="indent TopIndent">Lesson 1: Find the constant of proportionality from a table</button></a>
+        <a href="https://www.ixl.com/math/grade-7/write-equations-for-proportional-relationships-from-tables" target="_blank"><button class="indent TopIndent">Lesson 2: Write equations for proportional relationships from tables </button></a>
+        <a href="https://www.ixl.com/math/grade-7/identify-proportional-relationships-by-graphing" target="_blank"><button class="indent TopIndent">Lesson 3: Identify proportional relationships by graphing</button></a>
+        <a href="https://www.ixl.com/math/grade-7/find-the-constant-of-proportionality-from-a-graph" target="_blank"><button class="indent TopIndent">Lesson 4: Find the constant of proportionality from a graph</button></a>
+        <a href="https://www.ixl.com/math/grade-7/write-equations-for-proportional-relationships-from-graphs" target="_blank"><button class="indent TopIndent">Lesson 5: Write equations for proportional relationships from graphs</button></a>
+        <a href="https://www.ixl.com/math/grade-7/identify-proportional-relationships-from-graphs-and-equations"><button class="indent TopIndent">Lesson 6: Identify proportional relationships from graphs and equations</button></a>
+        <a href="https://www.ixl.com/math/grade-7/identify-proportional-relationships-from-tables" target="_blank"><button class="indent TopIndent">Lesson 7: Identify proportional relationships from tables</button></a>
+        <a href="https://www.ixl.com/math/grade-7/complete-a-table-and-graph-a-proportional-relationship" target="_blank"><button class="indent TopIndent">Lesson 8: Complete a table and graph a proportional relationship </button></a>
+        <a href="https://www.ixl.com/math/grade-7/graph-a-proportional-relationship-word-problems" target="_blank"><button class="indent TopIndent">Lesson 9: Graph a proportional relationship: word problems</button></a>
+        <a href="https://www.ixl.com/math/grade-7/interpret-graphs-of-proportional-relationships" target="_blank"><button class="indent TopIndent">Lesson 10: Interpret graphs of proportional relationships</button></a>
+        <a href="https://www.ixl.com/math/grade-7/write-and-solve-equations-for-proportional-relationships" target="_blank"><button class="indent TopIndent">Lesson 11: Write and solve equations for proportional relationships</button></a>
+    </div>
+</body>
+</html>

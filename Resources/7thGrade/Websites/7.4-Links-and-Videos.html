@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Scripts/YoutubeColors.css">
+    <link rel="stylesheet" href="../../Scripts/IndentPages.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico">
+    <title>7.4 Links and Videos</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome) {
+                window.location.href = '../../../../unsupported.html';
+            }
+        });
+    </script>
+</head>
+<body>
+            <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'true') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = '../../../../index.html';
+        }
+    </script>
+    <button onclick="window.location.href='../seven.html'">Back</button>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="../../Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+    <h1>Illustrative Mathematics: Proportional Relationships and Percentages</h1>
+    <p>Note: If the videos are a little pixely, then hover over the video and click on the gear icon on the bottom right and click on "Quality" and then, click on "720p." It may not be there if your device doesn't support it, so check if it does.</p>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9OkfcwC5pk0" title="VLS G7U4V1 Proportional Relationships with Fractions &amp; Decimals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M87BLJIWax4" title="V S G7U4V2 Percent Increase and Decrease" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sfguIZrac8o" title="VLS G7U4V3 Applications of Percentages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DBTmRmVwbIQ" title="VLS G7U4V4 More Applications of Percentages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h1>IXL Skill Lessons</h1>
+    <div>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/what-percentage-is-illustrated" target="_blank"><button class="indent TopIndent">Lesson 1: What percentage is illustrated?</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/convert-between-percents-fractions-and-decimals" target="_blank"><button class="indent TopIndent">Lesson 2: Convert between percents, fractions, and decimals</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/compare-percents-to-fractions-and-decimals" target="_blank"><button class="indent TopIndent">Lesson 3: Compare percents to fractions and decimals</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/estimate-percents-of-numbers" target="_blank"><button class="indent TopIndent">Lesson 4: Estimate percents of numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/solve-percent-problems-using-strip-models" target="_blank"><button class="indent TopIndent">Lesson 5: Solve percent problems using strip models</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percents-of-numbers-and-money-amounts" target="_blank"><button class="indent TopIndent">Lesson 6: Percents of numbers and money amounts</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percents-of-numbers-word-problems" target="_blank"><button class="indent TopIndent">Lesson 7: Percents of numbers: word problems</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/solve-percent-equations" target="_blank"><button class="indent TopIndent">Lesson 8: Solve percent equations</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/solve-percent-equations-word-problems" target="_blank"><button class="indent TopIndent">Lesson 9: Solve percent equations: word problems</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percent-of-change" target="_blank"><button class="indent TopIndent">Lesson 10: Percent of change</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percent-of-change-word-problems" target="_blank"><button class="indent TopIndent">Lesson 11: Percent of change: word problems</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percent-of-change-find-the-original-amount-word-problems" target="_blank"><button class="indent TopIndent">Lesson 12: Percent of change: find the original amount word problems</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/percent-error-word-problems" target="_blank"><button class="indent TopIndent">Lesson 13: Percent error: word problems</button></a>
+    </div>
+</body>
+</html>

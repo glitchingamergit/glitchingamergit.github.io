@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Scripts/YoutubeColors.css">
+    <link rel="stylesheet" href="../../Scripts/IndentPages.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico">
+    <title>7.5 Links and Videos</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome) {
+                window.location.href = '../../../../unsupported.html';
+            }
+        });
+    </script>
+</head>
+<body>
+            <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'true') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = '../../../../index.html';
+        }
+    </script>
+    <button onclick="window.location.href='../seven.html'">Back</button>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="../../Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+    <h1>Illustrative Mathematics: Rational Number Arithmetic</h1>
+    <p>Note: If the videos are a little pixely, then hover over the video and click on the gear icon on the bottom right and click on "Quality" and then, click on "720p." It may not be there if your device doesn't support it, so check if it does.</p>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tQGO2y6Ue2g" title="VLS G7U5V1 Adding Rational Numbers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5Ni9kIdgcXQ" title="VLS G7U5V2 Subtracting Rational Numbers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FMta82ighc8" title="VLS G7U5V3 Multiplying and Dividing Rational Numbers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QqW_kZtpBdw" title="VLS G7U5V4 Solving With Rational Numbers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h1>IXL Skill Lessons</h1>
+    <div>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/convert-fractions-or-mixed-numbers-to-decimals" target="_blank"><button class="indent TopIndent">Lesson 1: Convert fractions or mixed numbers to decimals</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/convert-decimals-to-fractions-or-mixed-numbers" target="_blank"><button class="indent TopIndent">Lesson 2: Convert decimals to fractions or mixed numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/convert-between-decimals-and-fractions-or-mixed-numbers" target="_blank"><button class="indent TopIndent">Lesson 3: Convert between decimals and fractions or mixed numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/identify-rational-numbers" target="_blank"><button class="indent TopIndent">Lesson 4: Identify rational numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/classify-rational-numbers-using-a-diagram" target="_blank"><button class="indent TopIndent">Lesson 5: Classify rational numbers using a diagram</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/classify-rational-numbers" target="_blank"><button class="indent TopIndent">Lesson 6: Classify rational numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/absolute-value-of-rational-numbers" target="_blank"><button class="indent TopIndent">Lesson 7: Absolute value of rational numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/compare-rational-numbers" target="_blank"><button class="indent TopIndent">Lesson 8: Compare rational numbers</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/put-rational-numbers-in-order" target="_blank"><button class="indent TopIndent">Lesson 9: Put rational numbers in order</button></a>
+        <a class="indent" href="https://www.ixl.com/math/grade-7/classify-real-numbers" target="_blank"><button class="indent TopIndent">Lesson 10: Classify real numbers</button></a>
+    </div>
+</body>
+</html>

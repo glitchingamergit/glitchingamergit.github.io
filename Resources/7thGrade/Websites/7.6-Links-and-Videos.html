@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Scripts/YoutubeColors.css">
+    <link rel="stylesheet" href="../../Scripts/IndentPages.css">
+    <link rel="shortcut icon" href="../../Images/favicon.ico">
+    <title>7.5 Links and Videos</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome) {
+                window.location.href = '../../../../unsupported.html';
+            }
+        });
+    </script>
+</head>
+<body>
+            <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'true') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = '../../../../index.html';
+        }
+    </script>
+    <button onclick="window.location.href='../seven.html'">Back</button>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="../../Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+    <h1>Khan Academy: Operations & Algebraic Thinking</h1>
+    <p>Note: If the videos are a little pixely, then hover over the video and click on the gear icon on the bottom right and click on "Quality" and then, click on "720p" (sometimes there is 1080p or 1080p60, just choose the highest). It may not be there if your device doesn't support it, so check if it does.</p>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vkhYFml0w6c" title="Why we do the same thing to both sides: Multi-step equations | Algebra I | Khan Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f15zA0PhSek" title="Introduction to solving an equation with variables on both sides | Algebra I | Khan Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1c5HY3z4k8M" title="Example 2: Variables on both sides | Linear equations | Algebra I | Khan Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PL9UYj2awDc" title="A clever application of the distributive property to solve a multi-step equation | Khan Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z7C69xP08d8" title="Ex 2: Multi-step equation | Linear equations | Algebra I | Khan Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h1>Khan Academy Lessons and Videos:</h1>
+    <div>
+        <a class="indent" href="https://www.khanacademy.org/kmap/operations-and-algebraic-thinking-j/oat231-solving-equations-inequalities/linear-equations-with-variables-on-both-sides/v/why-we-do-the-same-thing-to-both-sides-multi-step-equations"><button>Khan Academy Course</button></a>
+    </div>
+</body>
+</html>
