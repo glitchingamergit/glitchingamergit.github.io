@@ -163,7 +163,7 @@
             .find(row => row.startsWith('isLoggedIn='))
             ?.split('=')[1];
 
-        if (isLoggedIn == undefined) {
+        if (isLoggedIn !== undefined) {
             // If the cookie is not found, redirect to the login page.
             // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
             window.location.href = 'main.html';
