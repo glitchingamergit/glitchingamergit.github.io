@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Images/favicon.ico">
+    <link rel="stylesheet" href="../Scripts/ShinyButtonAndText.css">
+    <link rel="stylesheet" href="../Scripts/IndentPages.css">
+    <title>8th Grade Math Notes, Videos, and Questions</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (!isChrome) {
+                window.location.href = '../../../unsupported.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Place this right after the opening <body> tag -->
+    <script>
+        // This script checks if the 'isLoggedIn' cookie exists and is set to 'true'.
+        const isLoggedIn = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('isLoggedIn='))
+            ?.split('=')[1];
+
+        if (isLoggedIn !== 'true') {
+            // If the cookie is not found, redirect to the login page.
+            // --- CHANGE 'index.html' IF YOUR LOGIN PAGE HAS A DIFFERENT NAME ---
+            window.location.href = '../../../index.html';
+        }
+    </script>
+    <button onclick="window.location.href='../../main.html'">Back</button>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="../../Resources/Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+</body>
