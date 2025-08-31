@@ -44,7 +44,7 @@ function checkPassword() {
         
         // Create a cookie named 'isLoggedIn' that is valid for 1 day.
         // The 'path=/' makes the cookie available across the entire site.
-        const expires = new Date(Date.now() + 86400e3).toUTCString(); // 86400e3 is 24 hours
+        const expires = new Date(Date.now() + 7 * 86400e3).toUTCString(); // 7 days
         document.cookie = `isLoggedIn=true; expires=${expires}; path=/; SameSite=Lax`;
         
         // Redirect to the new page
