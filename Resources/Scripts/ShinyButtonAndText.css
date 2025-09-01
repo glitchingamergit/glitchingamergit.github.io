@@ -1,5 +1,5 @@
 button {
-    background: linear-gradient(145deg, #ffcc33, #ff9900);
+    background: linear-gradient(145deg, #434342, #2a2927);
     border: none;
     border-radius: 5px;
     color: white;
@@ -11,12 +11,12 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(145deg, #ff9900, #ffcc33);
+    background: linear-gradient(145deg, #2a2927, #434342);
     transform: scale(1.05);
 }
 
 a {
-    color: #ff9900;
+    color: #2a2927;
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -27,7 +27,7 @@ a::after {
     position: absolute;
     width: calc(100% - 40px); /* Adjust width to account for button padding */
     height: 2px;
-    background: #ff9900;
+    background: #2a2927;
     left: 20px; /* Adjust left to account for button padding */
     bottom: -2px;
     border-radius: 5px; /* Match button border radius */
@@ -36,7 +36,7 @@ a::after {
 }
 
 a:hover {
-    color: #ffcc33;
+    color: #434342;
 }
 
 a:hover::after {
@@ -45,21 +45,21 @@ a:hover::after {
 
 h1, h2, h3, h4, h5, h6, label, p {
     font-family: 'Courier New', Courier, monospace;
-    color: #ffcf86;
+    color: #565656;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 body {
-    background: linear-gradient(90deg, rgb(149, 97, 0), rgb(255, 128, 2));
+    background: linear-gradient(90deg, rgb(52, 51, 49), rgb(0, 0, 0));
 }
 
 .CS {
-    background: linear-gradient(145deg, #cc9900, #cc6600);
+    background: linear-gradient(145deg, #494947, #31302f);
     cursor: not-allowed;
 }
 
 .CS:hover {
-    background: linear-gradient(145deg, #cc6600, #cc9900);
+    background: linear-gradient(145deg, #31302f, #494947);
     transform: scale(1.05);
 }
 

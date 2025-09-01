@@ -43,7 +43,7 @@
             font-size: 64px;
             cursor: pointer;
             border: none;
-            background-color: #f7a800;
+            background-color: #242323;
             color: white;
             border-radius: 12px; /* Smoother corners */
             font-weight: bold;
@@ -52,7 +52,7 @@
         }
 
         .chrome-button:hover {
-            background-color: #e09700;
+            background-color: #3f3e3d;
             transform: translateY(-2px); /* Slight lift on hover */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
         }
@@ -79,9 +79,11 @@
             visibility: visible;
         }
 
+        /* ...existing styles... */
+
         .modal-content {
-            background: #fff;
-            color: #333;
+            background: #000; /* Changed to black */
+            color: #fff;      /* Make all text inside modal white by default */
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -91,19 +93,13 @@
             transform: scale(0.9);
             transition: transform 0.3s ease;
         }
-        
-        .modal-overlay.visible .modal-content {
-            transform: scale(1);
-        }
 
         .modal-content h2 {
-            margin-top: 0;
-            font-size: 1.5rem;
+            color: #fff
         }
 
         .modal-content p {
-            font-size: 1rem;
-            color: #666;
+            color: #fff;
         }
 
         #password-input {
@@ -134,16 +130,16 @@
         }
 
         .submit-btn {
-            background-color: #4285F4;
-            color: white;
+            background-color: #000000;
+            color: rgb(0, 0, 0);
         }
-        .submit-btn:hover { background-color: #357ae8; }
+        .submit-btn:hover { background-color: #1d1e1f; }
 
         .cancel-btn {
-            background-color: #e0e0e0;
-            color: white;
+            background-color: #2e2d2d;
+            color: rgb(0, 0, 0);
         }
-        .cancel-btn:hover { background-color: #d5d5d5; }
+        .cancel-btn:hover { background-color: #080808; }
         
         #wrong-password-message {
             color: #d93025; /* Red color for error */

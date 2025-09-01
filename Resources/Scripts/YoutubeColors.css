@@ -1,5 +1,5 @@
 button {
-    background: linear-gradient(145deg, #e21010, #ea2792, #3a58c7, #2ec29d);
+    background: linear-gradient(145deg, #242424, #363535);
     border: none;
     border-radius: 5px;
     color: white;
@@ -16,7 +16,7 @@ button:hover {
 }
 
 a {
-    color: linear-gradient(90deg,  #2e2a2a);
+    color: linear-gradient(90deg,  #373333);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, label, p {
 }
 
 body {
-    background: linear-gradient(90deg, #000000);
+    background: linear-gradient(90deg, #000000, #434343);
 }
 
 button:active {
