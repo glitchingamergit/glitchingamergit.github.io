@@ -54,13 +54,12 @@ body {
 }
 
 .CS {
-    background: linear-gradient(145deg, #494947, #31302f);
+    background: linear-gradient(145deg, black);
     cursor: not-allowed;
 }
 
 .CS:hover {
     background: linear-gradient(145deg, #31302f, #494947);
-    transform: scale(1.05);
 }
 
 button:active {
