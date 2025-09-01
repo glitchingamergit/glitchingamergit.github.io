@@ -58,8 +58,8 @@
         <a href="https://www.ixl.com/math/grade-7/interpret-graphs-of-proportional-relationships" target="_blank" class="external-link"><button class="indent TopIndent">Lesson 10: Interpret graphs of proportional relationships</button></a>
         <a href="https://www.ixl.com/math/grade-7/write-and-solve-equations-for-proportional-relationships" target="_blank" class="external-link"><button class="indent TopIndent">Lesson 11: Write and solve equations for proportional relationships</button></a>
 
-        <div id="externalLinkModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
-            <div style="background:#fff; padding:24px; border-radius:8px; max-width:350px; margin:auto; text-align:center;">
+        <!-- <div id="externalLinkModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+            <div style="background:#393535; padding:24px; border-radius:8px; max-width:350px; margin:auto; text-align:center;">
                 <p>You are about to visit another site that is not owned or ran by us. Also they might need payment to run.<br>Do you want to proceed?</p>
                 <label style="font-size:0.95em;">
                     <input type="checkbox" id="dontShowAgainCheckbox"> Don't show this again
@@ -69,42 +69,9 @@
                     <button id="cancelBtn">Cancel</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <script>
-            // Helper to get cookie value
-            function getCookie(name) {
-                return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
-            }
-
-            // Show popup only if cookie not set
-            document.querySelectorAll('.external-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (getCookie('skipExternalPrompt') === 'true') return;
-                    e.preventDefault();
-                    const modal = document.getElementById('externalLinkModal');
-                    modal.style.display = 'flex';
-                    // Save the link to proceed
-                    modal.dataset.href = this.href;
-                });
-            });
-
-            // Proceed button
-            document.getElementById('proceedBtn').onclick = function() {
-                const modal = document.getElementById('externalLinkModal');
-                if (document.getElementById('dontShowAgainCheckbox').checked) {
-                    // Set cookie for 1 year
-                    document.cookie = "skipExternalPrompt=true; path=/; max-age=" + (60*60*24*365);
-                }
-                window.open(modal.dataset.href, '_blank');
-                modal.style.display = 'none';
-            };
-
-            // Cancel button
-            document.getElementById('cancelBtn').onclick = function() {
-                document.getElementById('externalLinkModal').style.display = 'none';
-            };
-        </script>
+        
     </div>
     </div>
 </body>
