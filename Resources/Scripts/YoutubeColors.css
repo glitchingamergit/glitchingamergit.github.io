@@ -11,12 +11,12 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(145deg,  #2ec29d, #3a58c7, #ea2792, #e21010);
+    background: linear-gradient(145deg,  #31282f);
     transform: scale(1.05);
 }
 
 a {
-    color: linear-gradient(90deg,  #2ec29d, #3a58c7, #ea2792, #e21010);
+    color: linear-gradient(90deg,  #2e2a2a);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -27,7 +27,7 @@ a::after {
     position: absolute;
     width: calc(100% - 40px); /* Adjust width to account for button padding */
     height: 2px;
-    background: #e7429d;
+    background: #5c5559;
     left: 20px; /* Adjust left to account for button padding */
     bottom: -2px;
     border-radius: 5px; /* Match button border radius */
@@ -36,7 +36,7 @@ a::after {
 }
 
 a:hover {
-    color: #FF0000;
+    color: #5b5353;
 }
 
 a:hover::after {
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, label, p {
 }
 
 body {
-    background: linear-gradient(90deg, #FF0000, #FF008C, #335FFF, #1BD1A5);
+    background: linear-gradient(90deg, #000000);
 }
 
 button:active {
