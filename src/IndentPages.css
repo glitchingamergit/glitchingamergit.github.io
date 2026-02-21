@@ -1,0 +1,15 @@
+.indent, button:not(.top-left-button, #site-button) {
+    margin-left: 20px;
+}
+
+.TopIndent, button:not(.top-left-button, #site-button) {
+    margin-top: 20px; 
+}
+
+.DoubleIndent {
+    margin-left: 40px; 
+}
+
+.DoubleTopIndent {
+    margin-top: 40px; 
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> - Used to work, but doesn't -->
+
+    <style>
+
+        * {
+            font-family: sans-serif;
+            text-align: center;
+            position: relative;
+            padding: 0;
+        }
+
+        button {
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            background-color: aliceblue;
+            border-radius: 0.3rem;
+            font-size: 200%;
+            padding: 15px 30px;
+            width: fit-content;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            button {
+                background-color: #333333;
+                color: #ffffff;
+            }
+        }
+
+    </style>
+
+    <title>404 Not Found</title>
+</head>
+<body>
+    <h1>404 Not Found</h1>
+    <h2 id="message"></h2>
+    <h2>Click the button below to go back home:</h2>
+    <a href="../"><button>Back to Home</button></a>
+
+    <script>
+
+        let search = window.location.href; 
+        const h2Message = document.getElementById("message");
+
+        if (search.includes("https://glitchingamergit.github.io/")) {
+            search = search.replace("https://glitchingamergit.github.io/", "");
+        }
+
+        if (search) {
+            h2Message.textContent = `The provided path (/${search}) wasn't found on the website`;
+        } else {
+            h2Message.textContent = `The provided path (which the page can't read) wasn't found on the website`;
+        }
+
+    </script>
+</body>
+</html>

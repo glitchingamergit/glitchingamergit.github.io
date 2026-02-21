@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/src/IndentPages.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 8:32 PM UTC</p>
+    <h1>Please click on the available website below:</h1>
+    <a href="websites/calculator/"><button>Calculator</button></a>
+    <a href="websites/math-docs/"><button>Math PDF Files</button></a>
+    <a href="websites/soundboard/"><button>Soundboard</button></a>
+    <a href="websites/recover-links/"><button>"Recoverlinks.com"</button></a>
+    <a href="websites/randomizer/"><button>Website Randomizer</button></a>
+
+    <script>
+
+        let welcomeText = document.getElementById("welcome");
+        let pageTitle = document.title;
+        let url = window.location.href;
+
+        if (url != null) {
+            if (url.includes("https://")) {
+                url = url.replace("https://", "");
+            } else if (url.includes("http://")) {
+                url = url.replace("http://", "");
+            }
+
+            if (url.includes("/")) {
+                url = url.replace("/", "");
+            }
+
+            welcomeText.textContent = `Welcome to ${url}`;
+            document.title = url;
+        }
+
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        if (urlParams.get('p') === 'rr') {
+            const newWindow = window.open("https://www.youtube.com/watch?v=QDia3e12czc", "_self");
+
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                alert("Popup blocked! Please allow popups or use the link on the page.");
+            }
+        }
+
+    </script>
+</body>
+</html>

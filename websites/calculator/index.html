@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Resources/style.css">
+    <link rel="shortcut icon" href="Resources/favicon.ico">
+
+    <style>
+
+        .top-left-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #333333;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+            width: fit-content;
+            height: fit-content;
+            border-color: black;
+        }
+
+        .top-left-button:hover {
+            transform: scale(1.1);
+        }
+
+        .top-left-button:active {
+            transform: scale(0.95);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../../"><button class="top-left-button">Back</button></a>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="inputBox" placeholder="0" readonly/>
+            <div>
+                <button class="button operator">AC</button>
+                <button class="button operator">DEL</button>
+                <button class="button operator">/</button>
+                <button class="button operator">^</button>
+            </div>
+            <div>
+                <button class="button ">7</button>
+                <button class="button ">8</button>
+                <button class="button ">9</button>
+                <button class="button operator">*</button>
+            </div>
+            <div>
+                <button class="button ">4</button>
+                <button class="button ">5</button>
+                <button class="button ">6</button>
+                <button class="button operator">-</button>
+            </div>
+            <div>
+                <button class="button ">1</button>
+                <button class="button ">2</button>
+                <button class="button ">3</button>
+                <button class="button operator">+</button>
+            </div>
+            <div>
+                <button class="button ">00</button>
+                <button class="button ">0</button>
+                <button class="button ">.</button>
+                <button class="button equalBtn">=</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="Resources/script.js"></script>
+</body>
+</html>

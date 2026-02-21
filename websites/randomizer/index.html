@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="shortcut icon" href="Resources/favicon.ico" type="image/x-icon">
+    <title>Web Randomizer</title>
+</head>
+<body>
+    <a href="../../"><button class="top-left-button">Back</button></a>
+    <button id="RandomButton" onclick="OpenRandomWebsite()">???</button>
+
+    <p id="hint">Hint: Hold Control key (or Command ⌘ key for Mac) while spamming the button to open multiple websites at once!</p>
+    <button id="CloseAllWebsites" onclick="closeAllOpenedTabs()">Close all websites (May not work for all)</button>
+
+    <div class="bottom-right-div">
+        <a href="sites.json"><button id="site-button">List of sites</button></a>
+        <p>This button brings you to the list of all possible websites for those concerned</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
