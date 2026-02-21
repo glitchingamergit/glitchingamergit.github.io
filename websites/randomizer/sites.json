@@ -75,5 +75,12 @@
     "https://www.amazon.com/",
     "https://www.pinterest.com/",
     "https://www.spotify.com/us/",
-    "https://classroom.google.com"
+    "https://classroom.google.com",
+
+    "../../",
+    "../calculator/",
+    "../math-docs/",
+    "../recover-links/",
+    "../soundboard/",
+    "../../?p=rr"
 ]
