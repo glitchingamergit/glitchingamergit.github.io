@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/IndentPages.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Credits</title>
+
+    <style>
+
+        strong {
+            font-size: larger;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            margin-bottom: 60px;
+            padding: 0 10px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        iframe[src*="scratch.mit.edu"] {
+            aspect-ratio: 4 / 3; 
+        }
+
+        a {
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../"><button class="top-left-button">Back</button></a>
+    <h1>This website was made possible with a little help from AI (Google Gemini) and Google itself</h1>
+    <h1>Some of which are from YouTubers themselves (when I was a noob) to make the "little" websites</h1>
+    <h2>Others were made myself!</h2>
+    <h2>Tab icons are from Google Images</h2>
+    <div>
+        <li><strong>Calculator</strong> - (I couldn't find the original video where I made it but this gives you an idea):
+            <iframe src="https://www.youtube.com/embed/I5kj-YsmWjM" title="Build this JS calculator in 15 minutes!" frameborder="0" allowfullscreen></iframe>
+        </li>
+        <li><strong>Soundboard</strong> - An inspiration of <a href="https://scratch.mit.edu/projects/925869735/">Scratch Project:</a>
+            <iframe src="https://scratch.mit.edu/projects/925869735/embed" allowfullscreen></iframe>
+        </li>
+        <li><strong>Recover Links</strong> - Made from ChatGPT when I was first learning HTML</li>
+    </div>
+    
+    <script>
+        if (window.location.href.includes("index.html")) window.open(".", "_self");
+    </script>
+</body>
+</html>
