@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="/src/IndentPages.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <h1 id="welcome"></h1>
     <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 8:32 PM UTC</p>
     <h1>Please click on the available website below:</h1>
-    <a href="websites/calculator/"><button>Calculator</button></a>
-    <a href="websites/math-docs/"><button>Math PDF Files</button></a>
-    <a href="websites/soundboard/"><button>Soundboard</button></a>
-    <a href="websites/recover-links/"><button>"Recoverlinks.com"</button></a>
-    <a href="websites/randomizer/"><button>Website Randomizer</button></a>
+    <a href="./websites/calculator/"><button>Calculator</button></a>
+    <a href="./websites/math-docs/"><button>Math PDF Files</button></a>
+    <a href="./websites/soundboard/"><button>Soundboard</button></a>
+    <a href="./websites/recover-links/"><button>"Recoverlinks.com"</button></a>
+    <a href="./websites/randomizer/"><button>Website Randomizer</button></a>
 
     <script>
 
@@ -32,7 +32,7 @@
 
             // List of if-statements
             if (url.includes("/")) url = url.replace("/", "");
-            if (url.includes("index.html")) url = url.replace("index.html", "");
+            if (url.includes("index.html")) window.open(".", "_self");
 
             welcomeText.textContent = `Welcome to ${url}`;
             document.title = url;
@@ -48,6 +48,42 @@
             if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
                 alert("Popup blocked! Please allow popups or use the link on the page.");
             }
+        }
+        
+        let websiteShortcut = urlParams.get('w');
+        if (websiteShortcut != null) websiteShortcut = websiteShortcut.toLowerCase();
+
+        // List of shortcuts you can use to access website more easily!
+        // Just put '?w=[case value]' to the end of the URL to access them (NOT CASE-SENSITIVE)!
+        switch (websiteShortcut) {
+            case "calculator":
+                window.open("./websites/calculator/", "_self");
+                break;
+            case "pdf":
+            case "math-pdf":
+            case "math-pdfs":
+            case "math-documents":
+            case "math-document":
+            case "math-docs":
+            case "math-doc":
+            case "math":
+                window.open("./websites/math-docs/", "_self");
+                break;
+            case "sb":
+            case "soundboard":
+                window.open("./websites/soundboard/", "_self");
+                break;
+            case "recover":
+            case "recover-links":
+            case "links":
+                window.open("./websites/recover-links/", "_self");
+                break;
+            case "random":
+            case "random-links":
+            case "random-link":
+            case "randomizer":
+                window.open("./websites/randomizer/", "_self");
+                break;
         }
 
     </script>
