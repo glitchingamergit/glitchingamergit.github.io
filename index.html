@@ -30,9 +30,9 @@
                 url = url.replace("http://", "");
             }
 
-            if (url.includes("/")) {
-                url = url.replace("/", "");
-            }
+            // List of if-statements
+            if (url.includes("/")) url = url.replace("/", "");
+            if (url.includes("index.html")) url = url.replace("index.html", "");
 
             welcomeText.textContent = `Welcome to ${url}`;
             document.title = url;
