@@ -12,6 +12,8 @@ CloseButton.style.display = "none";
 async function loadSites() {
     try {
         const response = await fetch('sites.json');
+        if (!response.ok) throw Error(response.status);
+
         tableOfSites = await response.json();
         console.log("Sites loaded successfully");
     } catch (error) {
