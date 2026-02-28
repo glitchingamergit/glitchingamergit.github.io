@@ -27,6 +27,7 @@
     "https://www.data.gov",
     "https://www.atf.gov",
     "https://www.fbi.gov",
+    "https://www.get.gov/",
 
     "https://pbskids.org/",
     "https://constitutioncenter.org/",
@@ -38,8 +39,11 @@
     "https://www.stanford.edu/",
     "https://www.mit.edu/",
 
+    "https://constitutioncenter.org/the-constitution/amendments",
     "https://www.rockstargames.com/games/",
     "https://store.steampowered.com/",
+    "https://soundboardguys.com/#google_vignette",
+    "https://www.nasdaq.com/",
     "https://andrew.hedges.name/experiments/aspect_ratio/",
     "https://www.khanacademy.org/kmap/operations-and-algebraic-thinking-j",
     "https://github.com/glitchingamergit/glitchingamergit.github.io/tree/main/websites/",
@@ -56,6 +60,7 @@
     "https://www.youtube.com/",
     "https://studio.youtube.com/",
     "https://www.codeninjas.com/",
+    "https://www.neal.fun/",
     "https://www.github.com/",
     "https://scratch.mit.edu/",
     "https://www.prodigygame.com/",
@@ -89,6 +94,5 @@
     "../calculator/",
     "../math-docs/",
     "../recover-links/",
-    "../soundboard/",
-    "../../?p=rr"
+    "../soundboard/"
 ]
