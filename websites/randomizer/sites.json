@@ -94,5 +94,6 @@
     "../calculator/",
     "../math-docs/",
     "../recover-links/",
-    "../soundboard/"
+    "../soundboard/",
+    "."
 ]
