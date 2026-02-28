@@ -42,7 +42,8 @@
     </style>
 </head>
 <body>
-    <a href="../../"><button class="top-left-button">Back</button></a>
+    <a href="../../"><button class="top-left-button crewmate">Back</button></a>
+    <h1 class="notCrewmate">Please interact with the website!</h1>
     <h1>Welcome to my Soundboard</h1>
     <button id="stopButton" class="indent TopIndent" onclick="StopAllSounds()">Stop All Playing Sounds</button>
     <p>Click a button to play a sound!</p>
@@ -77,6 +78,7 @@
         <button id="sound28" class="indent TopIndent">Stupid</button>
         <button id="sound29" class="indent TopIndent">What</button>
     </div>
+    <button class="bottom-right-button" onclick="PlayAllSounds()">Play all sounds <strong style="color: red;">(VOLUME WARNING)</strong> 💀💀💀</button>
 
     <script>
         if (window.location.href.includes("index.html")) window.open(".", "_self");

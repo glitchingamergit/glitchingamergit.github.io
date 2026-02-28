@@ -34,6 +34,14 @@
             transform: scale(0.95);
         }
 
+        #hint {
+            position: fixed;
+            color: white;
+            bottom: 10px;
+            right: 10px;
+            font-size: large;
+        }
+
         @media (prefers-color-scheme: dark) {
             .top-left-button {
                 background-color: #333333;
@@ -80,7 +88,7 @@
             </div>
         </div>
     </div>
-    </div>
+    <p id="hint">Hint: you can use the keyboard to enter the numbers (Sadly not the enter/return key nor the operators because it messes things up).</p>
 
     <script>
         if (window.location.href.includes("index.html")) window.open(".", "_self");

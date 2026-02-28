@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="/src/IndentPages.css">
     <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+
+    <style>
+
+    </style>
 </head>
 <body>
     <h1 id="welcome"></h1>
@@ -17,12 +21,9 @@
     <a href="./websites/recover-links/"><button>"Recoverlinks.com"</button></a>
     <a href="./websites/randomizer/"><button>Website Randomizer</button></a>
 
-    <a href="credits/"><button class="bottom-right-button">Credits</button></a>
-
     <script>
 
         let welcomeText = document.getElementById("welcome");
-        let pageTitle = document.title;
         let url = window.location.href;
 
         if (url != null) {
@@ -43,11 +44,13 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
 
-        if (urlParams.get('p') === 'rr') {
-            const newWindow = window.open("https://www.youtube.com/watch?v=QDia3e12czc", "_self");
+        if (urlParams.get('p') !== null) {
+            if (urlParams.get('p').toLowerCase() === 'rr') {
+                const newWindow = window.open("https://www.youtube.com/watch?v=QDia3e12czc", "_self");
 
-            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-                alert("Popup blocked! Please allow popups or use the link on the page.");
+                if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                    alert("Popup blocked! Please allow popups or use the link on the page.");
+                }
             }
         }
         
@@ -72,7 +75,13 @@
                 break;
             case "sb":
             case "soundboard":
-                window.open("./websites/soundboard/", "_self");
+                if (urlParams.get('i') !== null) {
+                    switch (urlParams.get('i').toLowerCase()) {
+                        case "playall":
+                            window.open(`./websites/soundboard/?i=${urlParams.get('i').toLowerCase()}`, "_self");
+                    }
+                }
+
                 break;
             case "recover":
             case "recover-links":
@@ -88,5 +97,9 @@
         }
 
     </script>
+    <div class="button-brothers">
+        <a href="credits/"><button class="small-button">Credits</button></a>
+        <a href="about-me/"><button class="small-button">About the Developer</button></a>
+    </div>
 </body>
 </html>
