@@ -3,6 +3,9 @@ body {
     text-align: center;
     position: relative;
     padding: 0;
+    background-color: #dcdcdc;
+    color: #222222;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #message {
@@ -26,11 +29,15 @@ body {
 button {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    background-color: aliceblue;
+    background-color: rgb(158, 162, 165);
     border-radius: 0.3rem;
     font-size: 200%;
     padding: 15px 30px;
     width: fit-content;
+}
+
+button:not(.top-left-button, .top-right-button, .bottom-right-button, .bottom-left-button) {
+    color: white;
 }
 
 button:hover {
@@ -119,12 +126,6 @@ button:active {
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 12px;
-}
-
-body {
-  background-color: #ffffff;
-  color: #333333;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,16 +6,45 @@
     <link rel="stylesheet" href="../src/style.css">
     <link rel="stylesheet" href="/src/IndentPages.css">
     <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+
+    <style>
+
+        button#calculator {
+            background-image: url(asset/web-icons/calculator.png);
+            color: white;
+        }
+
+        button#pdf {
+            background-image: url(asset/web-icons/math.png);
+            color: white;
+        }
+
+        button#sound {
+            background-image: url(asset/web-icons/soundboard_light.png);
+            color: white;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            button#pdf {
+                border-color: darkgrey;
+            }
+
+            button#sound {
+                background-image: url(asset/web-icons/soundboard_dark.png);
+            }
+        }
+
+    </style>
 </head>
 <body>
     <h1 id="welcome"></h1>
     <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 8:32 PM UTC</p>
     <h1>Please click on the available website below:</h1>
-    <a href="./websites/calculator/"><button>Calculator</button></a>
-    <a href="./websites/math-docs/"><button>Math PDF Files</button></a>
-    <a href="./websites/soundboard/"><button>Soundboard</button></a>
-    <a href="./websites/recover-links/"><button>"Recoverlinks.com"</button></a>
-    <a href="./websites/randomizer/"><button>Website Randomizer</button></a>
+    <a href="./websites/calculator/"><button id="calculator">Calculator</button></a>
+    <a href="./websites/math-docs/"><button id="pdf">Math PDF Files</button></a>
+    <a href="./websites/soundboard/"><button id="sound">Soundboard</button></a>
+    <a href="./websites/recover-links/"><button id="links">"Recoverlinks.com"</button></a>
+    <a href="./websites/randomizer/"><button id="random">Website Randomizer</button></a>
 
     <script>
 
@@ -72,11 +101,10 @@
             case "sb":
             case "soundboard":
                 if (urlParams.get('i') !== null) {
-                    switch (urlParams.get('i').toLowerCase()) {
-                        case "playall":
-                            window.open(`./websites/soundboard/?i=${urlParams.get('i').toLowerCase()}`, "_self");
-                    }
+                    window.open(`./websites/soundboard/?i=${urlParams.get('i').toLowerCase()}`, "_self");
+                    break;
                 }
+                window.open(`./websites/soundboard/`, "_self");
 
                 break;
             case "recover":
