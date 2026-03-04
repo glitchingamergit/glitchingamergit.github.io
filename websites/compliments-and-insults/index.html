@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../src/IndentPages.css">
+    <link rel="stylesheet" href="../../src/style.css">
+    <title>Compliments & Insults</title>
+
+    <style>
+
+        #compliment {
+            background-color: springgreen;
+            color: rgb(39, 39, 39);
+        }
+
+        #insult {
+            background-color: rgb(255, 41, 83);
+            color: rgb(39, 39, 39);
+        }
+
+        #output {
+            font-size: 24px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #compliment {
+                background-color: rgb(0, 109, 55);
+                color: white;
+                border-color: rgb(0, 163, 82);
+            }
+
+            #insult {
+                background-color: rgb(255, 41, 83);
+                color: white;
+                border-color: rgb(255, 41, 32);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <script>if (window.location.href.includes("index.html")) window.open(".", "_self");</script>
+    <script src="Resources/script.js"></script>
+    <a href="../../"><button class="top-left-button">Back</button></a>
+    <h1>Please click one of the buttons below:</h1>
+    <button id="compliment" class="Indent" onclick="ShowCompliment()">Compliment</button>
+    <button id="insult" class="Indent" onclick="ShowInsult()">Insult</button>
+    <p style="position: fixed; bottom: 10px; right: 10px; font-size: x-large;">I had to use AI because I couldn't think of good Compliments or Insults.</p>
+    <p id="output">Null;</p>
+</body>
+</html>

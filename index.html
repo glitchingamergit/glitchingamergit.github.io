@@ -9,6 +9,11 @@
 
     <style>
 
+        button#compliments-and-insults {
+            background-image: url(asset/web-icons/compliment_insult_light.png);
+            color: white;
+        }
+
         button#calculator {
             background-image: url(asset/web-icons/calculator.png);
             color: white;
@@ -25,6 +30,10 @@
         }
 
         @media (prefers-color-scheme: dark) {
+            button#compliments-and-insults {
+                background-image: url(asset/web-icons/compliment_insult_dark.png);
+            }
+
             button#pdf {
                 border-color: darkgrey;
             }
@@ -41,6 +50,7 @@
     <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 8:32 PM UTC</p>
     <h1>Please click on the available website below:</h1>
     <a href="./websites/calculator/"><button id="calculator">Calculator</button></a>
+    <a href="./websites/compliments-and-insults/"><button id="compliments-and-insults">Compliments & Insults</button></a>
     <a href="./websites/math-docs/"><button id="pdf">Math PDF Files</button></a>
     <a href="./websites/soundboard/"><button id="sound">Soundboard</button></a>
     <a href="./websites/recover-links/"><button id="links">"Recoverlinks.com"</button></a>
@@ -105,7 +115,6 @@
                     break;
                 }
                 window.open(`./websites/soundboard/`, "_self");
-
                 break;
             case "recover":
             case "recover-links":
@@ -117,6 +126,25 @@
             case "random-link":
             case "randomizer":
                 window.open("./websites/randomizer/", "_self");
+                break;
+            case "ci":
+            case "compliment":
+            case "compliments":
+            case "insult":
+            case "insults":
+            case "compliment and insult":
+            case "compliments and insult":
+            case "compliment and insults":
+            case "compliments and insults":
+                if (urlParams.get('message') !== null) {
+                    window.open(`./websites/compliments-and-insults/?message=${urlParams.get('message')}`, "_self");
+                    break;
+                } else if (urlParams.get('m') !== null) {
+                    window.open(`./websites/compliments-and-insults/?m=${urlParams.get('m')}`, "_self");
+                    break;
+                }
+
+                window.open(`./websites/compliments-and-insults/`, "_self");
                 break;
         }
 
