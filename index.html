@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style.css">
-    <link rel="stylesheet" href="/src/IndentPages.css">
-    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../asset/src/style.css">
+    <link rel="stylesheet" href="/asset/src/IndentPages.css">
+    <link rel="shortcut icon" href="asset/src/favicon.ico" type="image/x-icon">
 
     <style>
 
         button#compliments-and-insults {
-            background-image: url(asset/web-icons/compliment_insult_light.png);
+            background-image: url(asset/web-icon/compliment_insult_light.png);
             color: white;
         }
 
         button#calculator {
-            background-image: url(asset/web-icons/calculator.png);
+            background-image: url(asset/web-icon/calculator.png);
             color: white;
         }
 
         button#pdf {
-            background-image: url(asset/web-icons/math.png);
-            color: white;
+            background-image: url(asset/web-icon/math.png);
+            color: rgb(143, 143, 143);
+            padding: 10px 20px;
+            cursor: not-allowed;
+        }
+
+        button#pdf:hover {
+            transform: scale(1);
         }
 
         button#sound {
-            background-image: url(asset/web-icons/soundboard_light.png);
+            background-image: url(asset/web-icon/soundboard_light.png);
             color: white;
         }
 
         @media (prefers-color-scheme: dark) {
             button#compliments-and-insults {
-                background-image: url(asset/web-icons/compliment_insult_dark.png);
+                background-image: url(asset/web-icon/compliment_insult_dark.png);
             }
 
             button#pdf {
@@ -39,7 +45,7 @@
             }
 
             button#sound {
-                background-image: url(asset/web-icons/soundboard_dark.png);
+                background-image: url(asset/web-icon/soundboard_dark.png);
             }
         }
 
@@ -51,12 +57,13 @@
     <h1>Please click on the available website below:</h1>
     <a href="./websites/calculator/"><button id="calculator">Calculator</button></a>
     <a href="./websites/compliments-and-insults/"><button id="compliments-and-insults">Compliments & Insults</button></a>
-    <a href="./websites/math-docs/"><button id="pdf">Math PDF Files</button></a>
+    <button id="pdf" title="Used to be there, now it's deprecated :(">Math PDF Files</button>
     <a href="./websites/soundboard/"><button id="sound">Soundboard</button></a>
     <a href="./websites/recover-links/"><button id="links">"Recoverlinks.com"</button></a>
     <a href="./websites/randomizer/"><button id="random">Website Randomizer</button></a>
 
     <script>
+        console.log("Navya is a Bandar!");
 
         let welcomeText = document.getElementById("welcome");
         let url = window.location.href;
@@ -97,16 +104,6 @@
         switch (websiteShortcut) {
             case "calculator":
                 window.open("./websites/calculator/", "_self");
-                break;
-            case "pdf":
-            case "math-pdf":
-            case "math-pdfs":
-            case "math-documents":
-            case "math-document":
-            case "math-docs":
-            case "math-doc":
-            case "math":
-                window.open("./websites/math-docs/", "_self");
                 break;
             case "sb":
             case "soundboard":
