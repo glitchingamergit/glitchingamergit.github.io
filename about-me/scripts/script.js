@@ -10,7 +10,6 @@ function loadLatestVideo() {
     if (cachedData) {
         const { videoId, expiry } = JSON.parse(cachedData);
         if (now < expiry) {
-            console.log("Loading from cache (0 quota points used!)");
             updateIframe(videoId);
             return;
         }
@@ -35,7 +34,6 @@ function fetchLatestFromAPI() {
                 localStorage.setItem('yt_video_cache', JSON.stringify(cacheObject));
                 
                 updateIframe(latestVideoId);
-                console.log("Fetched from API (100 quota points used)");
             }
         })
         .catch(err => console.error("Error:", err));
