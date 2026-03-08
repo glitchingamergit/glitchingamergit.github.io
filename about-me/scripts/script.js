@@ -42,7 +42,7 @@ function fetchLatestFromAPI() {
 }
 
 function updateIframe(videoId) {
-    document.getElementById('latestVideoEmbed').src = `https://www.youtube.com/embed/${videoId}`;
+    document.getElementById('latestVideoEmbed').src = `https://www.youtube-nocookie.com/embed/${videoId}`;
 }
 
 loadLatestVideo();
