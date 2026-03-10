@@ -100,10 +100,11 @@
 
     "../../",
     "../calculator/",
-    "../math-docs/",
     "../recover-links/",
     "../soundboard/",
     "../compliments-and-insults",
+    "../days-until-day",
+    "../../asset/random/US_Constitution_Amendments.pdf",
     ".",
 
     "https://www.alaska.edu",
