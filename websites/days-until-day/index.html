@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/src/style.css">
+    <link rel="stylesheet" href="../../asset/src/IndentPages.css">
+    <link rel="shortcut icon" href="Resources/favicon.ico" type="image/x-icon">
+    <title>Days Until Day</title>
+
+    <script>if (window.location.href.includes('index.html')) window.open(".", "_self");</script>
+
+    <style>
+
+        input {
+            font-size: 40px;
+            padding: 0.6%;
+            height: 50%;
+            width: 12.5%;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            input {
+                background-color: rgb(30, 30, 30);
+                color: white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../../"><button class="top-left-button">Back</button></a>
+    <h1>Please type below to get the number of days from date:</h1>
+    <h1 id="output">ERROR?</h1>
+    
+    <input class="indent TopIndent" type="number" placeholder="Month*" id="mm" min="1" max="2">
+    <input class="indent TopIndent" type="number" placeholder="Day*" id="dd" min="1" max="2">
+    <input class="indent TopIndent" type="text" placeholder="Year" id="yy">
+    <input class="indent TopIndent" type="text" placeholder="Name" id="label" max="10">
+
+    <button onclick="SubmitRequest()" class="indent TopIndent">Submit</button>
+    <h1>* Required</h1>
+    <button id="clear" onclick="ClearAll()">Clear All</button>
+
+    <script src="Resources/script.js"></script>
+</body>
+</html>

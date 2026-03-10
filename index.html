@@ -19,10 +19,15 @@
             color: white;
         }
 
+        button#day {
+            color: white;
+            background-image: url(asset/web-icon/days-day-light.png);
+        }
+
         button#pdf {
             background-image: url(asset/web-icon/math.png);
-            color: rgb(143, 143, 143);
-            padding: 10px 20px;
+            color: rgb(127, 127, 127);
+            padding: 5px 10px;
             cursor: not-allowed;
         }
 
@@ -40,6 +45,10 @@
                 background-image: url(asset/web-icon/compliment_insult_dark.png);
             }
 
+            button#day {
+                background-image: url(asset/web-icon/days-day-dark.png);
+            }
+
             button#pdf {
                 border-color: darkgrey;
             }
@@ -53,11 +62,12 @@
 </head>
 <body>
     <h1 id="welcome"></h1>
-    <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 8:32 PM UTC</p>
+    <p id="message">RIP Math Website Late 2024 - 8 Feb. 2026 @ 20:32 UTC</p>
     <h1>Please click on the available website below:</h1>
     <a href="./websites/calculator/"><button id="calculator">Calculator</button></a>
     <a href="./websites/compliments-and-insults/"><button id="compliments-and-insults">Compliments & Insults</button></a>
-    <button id="pdf" title="Used to be there, now it's deprecated :(">Math PDF Files</button>
+    <a href="./websites/days-until-day/"><button id="day">Days Until Day</button></a>
+    <button id="pdf" title="Deprecated as of 8 Mar. 2026, 17:22 UTC">Math PDF Files</button>
     <a href="./websites/soundboard/"><button id="sound">Soundboard</button></a>
     <a href="./websites/recover-links/"><button id="links">"Recoverlinks.com"</button></a>
     <a href="./websites/randomizer/"><button id="random">Website Randomizer</button></a>
