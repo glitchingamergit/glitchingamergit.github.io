@@ -2,5 +2,4 @@
 *.DS_Store
 _MACOSX/
 *.txt
-push-git-repo.sh
 .gitignore
