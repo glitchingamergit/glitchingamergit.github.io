@@ -3,7 +3,7 @@ function getCountdown(month, day, year, message) {
     day = parseInt(day, 10);
 
     if (!message) {
-        message = "Unknown Day";
+        message = "the Unknown Day";
     }
 
     const now = new Date();
