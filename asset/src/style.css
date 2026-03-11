@@ -26,6 +26,10 @@ body {
     width: 100%;
 }
 
+a {
+    transition: transform 0.3s ease-in-out;
+}
+
 button {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -40,11 +44,11 @@ button:not(.top-left-button, .top-right-button, .bottom-right-button, .bottom-le
     color: white;
 }
 
-button:hover {
+button:hover, a:hover {
     transform: scale(1.1);
 }
 
-button:active {
+button:active, a:active {
     transform: scale(0.95);
 }
 
@@ -137,5 +141,9 @@ button:active {
   button, .top-left-button, .top-right-button, .bottom-left-button, .bottom-right-button, #site-button {
     background-color: #333333;
     color: #ffffff;
+  }
+
+  a {
+    color: aqua;
   }
 }
