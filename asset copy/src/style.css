@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    background-color: #dcdcdc;
+    color: #222222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.button-container {
+    position: fixed;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 300px; 
+    width: 100%;
+}
+
+a {
+    transition: transform 0.3s ease-in-out;
+}
+
+button {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: rgb(158, 162, 165);
+    border-radius: 0.3rem;
+    font-size: 200%;
+    padding: 15px 30px;
+    width: fit-content;
+}
+
+button:not(.top-left-button, .top-right-button, .bottom-right-button, .bottom-left-button) {
+    color: white;
+}
+
+button:hover, a:hover {
+    transform: scale(1.1);
+}
+
+button:active, a:active {
+    transform: scale(0.95);
+}
+
+.top-left-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.bottom-right-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.bottom-left-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.top-right-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.bottom-right-div {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+#site-button {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.small-button {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.button-brothers {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  button, .top-left-button, .top-right-button, .bottom-left-button, .bottom-right-button, #site-button {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  a {
+    color: aqua;
+  }
+}
