@@ -8,13 +8,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#message {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-}
-
 .button-container {
     position: fixed;
     display: grid;

@@ -10,7 +10,7 @@ function loadLatestVideo() {
     if (cachedData) {
         const { videoId, expiry } = JSON.parse(cachedData);
         if (now < expiry) {
-            updateIframe(videoId);
+            updateIframeAndLink(videoId);
             return;
         }
     }
@@ -33,14 +33,15 @@ function fetchLatestFromAPI() {
                 };
                 localStorage.setItem('yt_video_cache', JSON.stringify(cacheObject));
                 
-                updateIframe(latestVideoId);
+                updateIframeAndLink(latestVideoId);
             }
         })
         .catch(err => console.error("Error:", err));
 }
 
-function updateIframe(videoId) {
+function updateIframeAndLink(videoId) {
     document.getElementById('latestVideoEmbed').src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+    document.getElementById("latestVideoLink").herf = `https://www.youtube.com/watch?v=${videoId}`;
 }
 
 loadLatestVideo();

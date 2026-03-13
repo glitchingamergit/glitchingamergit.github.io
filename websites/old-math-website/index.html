@@ -1,0 +1,52 @@
+<!-- Website made and programmed by Ishaan Kaushik -->
+<!-- Videos are made by Illustrative Mathematics® -->
+<!-- Lessons made by IXL® and Khan Academy® -->
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <title>Math</title>
+    <link rel="stylesheet" href="Resources/Scripts/ShinyButtonAndText.css">
+    <link rel="stylesheet" href="Resources/Scripts/IndentPages.css">
+    <link rel="shortcut icon" href="Resources/Images/favicon.ico">
+
+    <style>
+        .top-left-button {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: aliceblue;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        button {
+            transition: transform 0.3s ease-in-out;
+            width: fit-content;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            button, .top-left-button, .top-right-button, .bottom-left-button, .bottom-right-button, #site-button {
+                background-color: #333333;
+                color: #ffffff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../../"><button class="top-left-button">Back</button></a>
+    <h1>Math</h1>
+    <a href="https://www.youtube.com/channel/UCDDupcLC-TB0g34qXX6Pexw?sub_confirmation=1" target="_blank">
+        <img src="Resources/Images/Youtube.png" style="width:50px;height:auto; float:right;">
+    </a>
+    <p style="float:right; margin-right: 10px;">SPONSORED Subscribe to GlitchinGamer:</p>
+    <p>Click on the grade level you want to view.</p>
+    <button class="notes indent TopIndent" onclick="window.location.href='Resources/Images/7thGrade/seven.html'">7th Grade</button>
+</body>
+</html>
