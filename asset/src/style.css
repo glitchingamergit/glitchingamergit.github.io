@@ -125,6 +125,10 @@ button:active, a:active {
     font-size: 12px;
 }
 
+a {
+    color: rgb(0, 0, 228);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
