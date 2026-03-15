@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>if (window.location.href.includes('index.html')) window.open(".", "_self");</script>
+
+    <title>Open Link in External Window</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../asset/src/style.css">
+    <link rel="stylesheet" href="../../../asset/src/IndentPages.css">
+    <style>
+
+        input {
+            font-size: 20px;
+            padding: 24px 48px;
+            width: 50%;
+            max-width: 400px;
+            min-width: 300px;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            input {
+                background-color: rgb(30, 30, 30);
+                color: white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../"><button class="top-left-button">Back</button></a>
+    <h1>Please put the link of a website below:</h1>
+    <input id="linkValue" type="url" placeholder="https://glitchingamergit.github.io/">
+    <br>
+    <button onclick="OpenWebsiteWindow()">Open</button>
+
+    <h2 style="margin-top: 10pc;">How it works:</h2>
+    <p>It makes a separate window of the website that can put on the box above!</p>
+    <p>Example for <a href="https://www.google.com/" target="_blank">Google.com</a>:</p>
+    <picture>
+        <source srcset="Resources/open_link_ex_dark.png" media="(prefers-color-scheme: dark)">
+        <img src="Resources/open_link_ex_light.png" alt="Image of google dot com" width="1000px">
+    </picture>
+
+    <script src="Resources/script.js"></script>
+</body>
+</html>

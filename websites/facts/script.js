@@ -15,6 +15,7 @@ async function loadJson(path) {
 let tableOfRandom = {
     "factsOfThings": {
         "facts": [
+            "\"We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.\" {urlLink:https://constitutioncenter.org/the-constitution/preamble,text:-U.S. Constitution Preamble}",
             "Honey never spoils; archaeologists have found edible honey in ancient Egyptian tombs.",
             "The heart of a shrimp is located in its head.",
             "A snail can sleep for up to three years.",
@@ -258,7 +259,7 @@ function getFact(initString) {
     let newFact = "";
     let attempts = 0;
 
-    while ((newFact === "" || newFact === lastFact) && attempts < 50) {
+    while ((newFact === "" || newFact === lastFact) && attempts <= 50) {
         newFact = getRandomString(tableOfRandom);
         attempts++;
     }
@@ -284,5 +285,13 @@ function getFact(initString) {
 
 document.addEventListener("DOMContentLoaded", async () => {
     tableOfRandom.factsOfThings.amendments = await loadJson("AmendmentWordings.json");
-    getFact("Initial (Fun) Fact: ");
+
+    const args = window.location.search;
+    const searchParams = new URLSearchParams(args);
+
+    if (searchParams.get('m')) {
+        output.textContent = searchParams.get('m');
+    } else {
+        getFact("Initial (Fun) Fact: ");
+    }
 });

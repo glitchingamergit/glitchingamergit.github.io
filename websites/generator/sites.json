@@ -119,13 +119,5 @@
     "https://www.spotify.com/us/",
     "https://classroom.google.com",
 
-    "../../",
-    "../calculator/",
-    "../recover-links/",
-    "../soundboard/",
-    "../compliments-and-insults",
-    "../days-until-day",
-    "../../asset/random/US_Constitution_Amendments.pdf",
-    "../old-math-website",
-    "."
+    "../../asset/random/US_Constitution_Amendments.pdf"
 ]

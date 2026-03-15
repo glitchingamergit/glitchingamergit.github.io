@@ -9,8 +9,11 @@ function getCountdown(month, day, year, message) {
     const now = new Date();
     now.setHours(0, 0, 0, 0);
     
-    if (year === null || year <= now.getFullYear()) {
+    if (year === null) {
         year = now.getFullYear();
+    } else if (year <= now.getFullYear()) {
+        document.getElementById("output").textContent = "N/A";
+        return null;
     }
 
     let dateOfDay = new Date(year, month, day);
