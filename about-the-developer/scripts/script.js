@@ -41,7 +41,7 @@ function fetchLatestFromAPI() {
 
 function updateIframeAndLink(videoId) {
     document.getElementById('latestVideoEmbed').setAttribute("src", `https://www.youtube-nocookie.com/embed/${videoId}`);
-    document.getElementById("latestVideoLink").setAttribute("herf", `https://www.youtube.com/watch?v=${videoId}`);
+    document.getElementById("latestVideoLink").setAttribute("href", `https://www.youtube.com/watch?v=${videoId}`);
 }
 
 loadLatestVideo();
