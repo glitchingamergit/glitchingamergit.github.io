@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="Resources/style.css">
+    <link rel="stylesheet" href="scripts/style.css">
     <link rel="shortcut icon" href="Resources/favicon.ico">
 
     <style>
@@ -63,28 +63,28 @@
                 <button class="button operator">^</button>
             </div>
             <div>
-                <button class="button ">7</button>
-                <button class="button ">8</button>
-                <button class="button ">9</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
                 <button class="button operator">*</button>
             </div>
             <div>
-                <button class="button ">4</button>
-                <button class="button ">5</button>
-                <button class="button ">6</button>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
                 <button class="button operator">-</button>
             </div>
             <div>
-                <button class="button ">1</button>
-                <button class="button ">2</button>
-                <button class="button ">3</button>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
                 <button class="button operator">+</button>
             </div>
             <div>
-                <button class="button ">00</button>
-                <button class="button ">0</button>
-                <button class="button ">.</button>
+                <button class="button">0</button>
+                <button class="button">.</button>
                 <button class="button equalBtn">=</button>
+                <button class="button" id="copy" onclick="copyTextToClipboard()"><img src="Resources/copy.png" width="25px"></button>
             </div>
         </div>
     </div>
@@ -93,6 +93,6 @@
     <script>
         if (window.location.href.includes("index.html")) window.open(".", "_self");
     </script>
-    <script src="Resources/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

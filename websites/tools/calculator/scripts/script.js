@@ -3,9 +3,13 @@ let buttons = document.querySelectorAll('button');
 let string = "";
 let arr = Array.from(buttons);
 
+const copyBtn = document.getElementById("copy");
+
 arr.forEach(button => {
     button.addEventListener('click', (e) => {
-        handleInput(e.target.innerHTML);
+        if (e !== copyBtn) {
+            handleInput(e.target.innerHTML);
+        }
     });
 });
 
@@ -40,3 +44,12 @@ function handleInput(value) {
         }
     }
 }
+
+async function copyTextToClipboard() {
+    try {
+        await navigator.clipboard.writeText(string);
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
+}
+
