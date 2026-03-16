@@ -32,4 +32,6 @@ function OpenWebsiteWindow(urlToOpen) {
         newWindow.focus();
         window.close();
     }
+
+    linkValue.value = "";
 }

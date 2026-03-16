@@ -28,13 +28,11 @@ function showRandomWebsite() {
 
     const isLucky = chanceFunction();
 
+    // Deprecated due to suggestion as of 15 Mar. 2026, 4:08 PM UTC:
+
     // if (!isLucky) {
     //     const RandomIndex = Math.floor(Math.random() * tableOfSites.length);
     //     const url = tableOfSites[RandomIndex];
-    //     newWindow = window.open(url, "_blank");
-    // } else {
-    //     const RandomIndex = Math.floor(Math.random() * taxes.length);
-    //     const url = taxes[RandomIndex];
     //     newWindow = window.open(url, "_blank");
     // }
 
@@ -46,13 +44,19 @@ function showRandomWebsite() {
         document.getElementById("linkForButton").setAttribute("target", "_blank");
 
         const RandomIndex = Math.floor(Math.random() * tableOfSites.length);
-        const url = tableOfSites[RandomIndex];
-        output.textContent = url;
+        let url = tableOfSites[RandomIndex];
+        document.getElementById("linkForButton").setAttribute("href", url);
+
+        if (url.includes("https://")) {
+            url = url.replace("https://", "");
+        } else if (url.includes("http://")) {
+            url = url.replace("http://", "");
+        }
         
         if (url === "." || url.includes("..") ) {
             document.getElementById("linkForButton").setAttribute("target", "_self");
         }
-
-        document.getElementById("linkForButton").setAttribute("href", url);
+        
+        output.textContent = url;
     }
 }
