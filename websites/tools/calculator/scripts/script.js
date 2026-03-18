@@ -48,6 +48,12 @@ function handleInput(value) {
 async function copyTextToClipboard() {
     try {
         await navigator.clipboard.writeText(string);
+        string = "";
+        input.value = "Copied!";
+
+        setTimeout(() => {
+            input.value = "";
+        }, 2000);
     } catch (err) {
         console.error('Failed to copy text: ', err);
     }

@@ -280,6 +280,7 @@ function getFact(initString) {
         formattedHtml = `<p>${formattedHtml.trim()}</p>`;
     }
 
+    console.log(formattedHtml);
     output.innerHTML = formattedHtml;
 }
 

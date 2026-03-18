@@ -67,12 +67,15 @@
     <a href="./websites/recover-links/"><button id="links">"Recoverlinks.com"</button></a>
     <a href="./websites/generator/"><button id="random">Website Generator</button></a>
 
+    <h1 style="margin-top: 5pc;">Also see:</h1>
+    <a href="./websites/tools/"><button id="tool">Tools</button></a>
+
     <h1 style="margin-top: 5pc;">Deprecated:</h1>
-    <button id="pdf" title="Deprecated as of 8 Mar. 2026, 17:22 UTC">Math PDF Files</button>
+    <button disabled id="pdf" title="Deprecated as of 8 Mar. 2026, 17:22 UTC">Math PDF Files</button>
 
-    <h1 style="margin-top: 5pc;">Also try out Tools:</h1>
-    <a href="./websites/tools/"><button id="tool">Go to Tools</button></a>
-
+    <h1 style="margin-top: 20pc;">Still can't choose?</h1>
+    <button onclick="iDontKnowWhereToGo()">"I'm feeling lucky!" - Google</button>
+    
     <script>
         console.log("Navya is a Bandar!");
 
@@ -175,6 +178,25 @@
             case "tool":
             case "tools":
                 window.open("./websites/tools", "_self");
+        }
+
+        let tableOfURLS = [];
+
+        async function loadJson(path) {
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw Error(response.status);
+                return await response.json();
+            } catch (error) {
+                console.error("Failed to load external sites:", error);
+                return [];
+            }
+        }
+
+       async function iDontKnowWhereToGo() {
+            tableOfURLS = await loadJson('allHTMLPages.json');
+            const randomUrl = tableOfURLS[Math.floor(Math.random() * tableOfURLS.length)];
+            window.open(randomUrl.toString(), "_self");
         }
 
     </script>
