@@ -1,6 +1,8 @@
 function getCountdown(month, day, year, message) {
-    month = parseInt(month, 10) - 1;
+    month = parseInt(month, 10) - 1; 
     day = parseInt(day, 10);
+    
+    year = year ? parseInt(year, 10) : null;
 
     if (!message) {
         message = "the Unknown Day";
@@ -9,40 +11,41 @@ function getCountdown(month, day, year, message) {
     const now = new Date();
     now.setHours(0, 0, 0, 0);
     
-    if (year === null) {
-        year = now.getFullYear();
-    } else if (year <= now.getFullYear()) {
-        document.getElementById("output").textContent = "N/A";
+    let targetYear;
+    if (year === null || year === 0) {
+        targetYear = now.getFullYear();
+    } else if (year < now.getFullYear()) {
+        document.getElementById("output").textContent = "Please pick a future year!";
         return null;
+    } else {
+        targetYear = year;
     }
 
-    let dateOfDay = new Date(year, month, day);
+    let dateOfDay = new Date(targetYear, month, day);
 
-    if (now > dateOfDay) {
-        dateOfDay = new Date(year + 1, month, day);
+    if (now > dateOfDay && (year === null || year === 0)) {
+        dateOfDay.setFullYear(targetYear + 1);
     }
 
     const diff = dateOfDay - now;
-    const days = Math.round(diff / (1000 * 60 * 60 * 24));
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
-    let daysOrDay = "days";
-    let isOrAre = "are";
-
-    if (days === 1) {
-        daysOrDay = "day";
-        isOrAre = "is";
+    if (days === 0) {
+        document.getElementById("output").textContent = "Today is " + message + "!";
+        return 0;
     }
 
-    document.getElementById("output").textContent = "Output: There " + isOrAre + " " + days + " " + daysOrDay + " until " + message + "!";
+    let daysOrDay = days === 1 ? "day" : "days";
+    let isOrAre = days === 1 ? "is" : "are";
+
+    document.getElementById("output").textContent = "There " + isOrAre + " " + days + " " + daysOrDay + " until " + message + "!";
     return days;
 }
 
-getCountdown(4, 15, null, "Tax Day");
-
-let requestedMonth = document.getElementById("mm");
-let requestedDay = document.getElementById("dd");
-let requestedYear = document.getElementById("yy");
-let requestedName = document.getElementById("label");
+const requestedMonth = document.getElementById("mm");
+const requestedDay = document.getElementById("dd");
+const requestedYear = document.getElementById("yy");
+const requestedName = document.getElementById("label");
 
 function ClearAll() {
     requestedMonth.value = "";
@@ -53,10 +56,12 @@ function ClearAll() {
 
 function SubmitRequest() {
     if (!requestedMonth.value || !requestedDay.value) {
-        ClearAll();
-        alert("Please put in the number of the month as well as the day.");
+        alert("Please select a month and enter a day.");
         return;
     }
 
     getCountdown(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
 }
+
+// Get the tax day :)
+getCountdown(4, 15, null, "Tax Day");

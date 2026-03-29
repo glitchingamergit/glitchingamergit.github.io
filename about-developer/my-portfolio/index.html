@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>if (window.location.href.includes('index.html')) window.open(".", "_self");</script>
+    <link rel="shortcut icon" href="../../asset/src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../asset/src/IndentPages.css">
+    <link rel="stylesheet" href="../../asset/src/style.css">
+    <title>Past Work | About the Developer</title>
+
+    <style>
+
+        a img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        a img:hover {
+            transform: scale(1.1);
+        }
+
+        a img:active {
+            transform: scale(0.95);
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex-container div {
+            /* flex: 1; */
+            width: 400px;
+            background-color: aliceblue;
+            border-radius: 12px;
+            /* height: 709px; */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .flex-container div {
+                background-color: #242424;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button class="top-left-button" onclick="history.back()">Back</button>
+
+    <h1>Here are my other projects I <br>
+         have worked on the past!
+    </h1>
+    <p>They're open-source (whenever possible)!</p>
+
+    <br>
+    <div class="flex-container">
+        <div>
+            <a href="file/RandomRoundsRoblox.rbxl" title="Download open-source project for Roblox Studio" download>
+                <img src="images/roblox-place-download.png" alt="Image with link" width="90px">
+                <h2>Random Rounds <br>
+                    (Open-Source Download)
+                </h2>
+            </a>
+            <p>
+            It's a project when I was making a <br>
+            Roblox Game! Sadly, it never got <br>
+            finished and became open-source. <br>
+            </p>
+            <strong>Size: ~207KB</strong>
+            <p>Screenshot:</p>
+            <img src="images/rb-game-screenshot.png" alt="Screenshot of Random Rounds Roblox Game" width="300px">
+        </div>
+
+        <div>
+            <a onclick="DownloadFile('file/ChallengeGamesApp.pkg')" href="javascript:void(0)" title="Download the install file for the app">
+                <img src="images/pkg-file.png" alt="Image with download link" width="100px">
+                <h2>Challenge Games <br> 
+                (Download for MacOS):</h2>
+            </a>
+
+            <p>
+            It's a project that I've made myself <br>
+            when completing my last project <br>
+            assignment using Unity at <a href="https://www.codeninjas.com/" target="_blank">Code Ninjas</a>! <br>
+            <br>
+            I lost my original project but I still have <br>
+            the compiled version for MacOS! <br>
+            <br>
+            Sorry Windows users :( <br>
+            <br>
+            <br>
+            <strong>Note: It may have a security restriction <br>
+            when opening the file! <br>
+            <br>
+            Size: ~60.6MB (For Install File)
+            </strong>
+            </p>
+
+            <br>
+            <p>Screenshot:</p>
+            <img src="images/challenge-games-screenshot.png" alt="Screenshot of Challenge Games" width="300px">
+        </div>
+    </div>
+    <br>
+    <p>And counting...</p>
+
+    <script>
+        function DownloadFile(path) {
+            if (navigator.userAgent.toLowerCase().includes('mac')) {
+                const link = document.createElement('a');
+                link.href = path;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                alert("You need to have MacOS for this file to work!");
+            }
+        }
+    </script>
+</body>
+</html>

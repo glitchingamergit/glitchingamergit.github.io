@@ -19,8 +19,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         outputText.style.display = "none";
     }
 
-    compliments = await loadJson('compliments.json');
-    insults = await loadJson('insults.json');
+    compliments = await loadJson('../../asset/configuration/compliments_ci.json');
+    insults = await loadJson('../../asset/configuration/insults_ci.json');
 
     const args = window.location.search;
     const searchParams = new URLSearchParams(args);
@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 async function ShowCompliment() {
     if (compliments.length <= 0) {
-        compliments = await loadJson('compliments.json');
+        compliments = await loadJson('../../asset/configuration/compliments_ci.json');
     }
 
     if (compliments.length > 0) {
@@ -55,7 +55,7 @@ async function ShowCompliment() {
 
 async function ShowInsult() {
     if (insults.length <= 0) {
-        insults = await loadJson('insults.json');
+        insults = await loadJson('../../asset/configuration/insults_ci.json');
     }
 
     if (insults.length > 0) {

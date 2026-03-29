@@ -35,3 +35,9 @@ function OpenWebsiteWindow(urlToOpen) {
 
     linkValue.value = "";
 }
+
+window.addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        OpenWebsiteWindow();
+    }
+});

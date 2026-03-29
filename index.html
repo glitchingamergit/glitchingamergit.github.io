@@ -9,6 +9,16 @@
 
     <style>
 
+        .button-brothers {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
         button#compliments-and-insults {
             background-image: url(asset/web-icon/compliment_insult_light.png);
             color: white;
@@ -57,8 +67,8 @@
 </head>
 <body>
     <h1 id="welcome"></h1>
-    <a href="./websites/old-math-website/"><button style="position: fixed; bottom: 10px; left: 40px; z-index: 9999; padding: 0% 0%;">Go to Recovered Site</button></a>
-    <p style="position: fixed; bottom: 40px; left: 80px; z-index: 9999;">Math Website is recovered and back!!!<p style="text-decoration: line-through; position: fixed; bottom: 60px; left: 0x; z-index: 9999;">RIP Math Website Late 2024 - 8 Feb. 2026 @ 20:32 UTC</p></p>
+    <!-- <a href="./websites/old-math-website/"><button style="position: fixed; bottom: 10px; left: 40px; z-index: 9999; padding: 0% 0%;">Go to Old Math Website</button></a> -->
+    <!-- <p style="position: fixed; bottom: 40px; left: 80px; z-index: 9999;">Math Website is recovered and back!!!<p style="text-decoration: line-through; position: fixed; bottom: 60px; left: 0x; z-index: 9999;">RIP Math Website Late 2024 - 8 Feb. 2026 @ 20:32 UTC</p></p> -->
     <h1>Please click on the available website below:</h1>
     <a href="./websites/compliments-and-insults/"><button id="compliments-and-insults">Compliments & Insults</button></a>
     <a href="./websites/days-until-day/"><button id="day">Days Until Day</button></a>
@@ -70,11 +80,12 @@
     <h1 style="margin-top: 5pc;">Also see:</h1>
     <a href="./websites/tools/"><button id="tool">Tools</button></a>
 
-    <h1 style="margin-top: 5pc;">Deprecated:</h1>
+    <h1 style="margin-top: 5pc;">Old/Deprecated:</h1>
     <button disabled id="pdf" title="Deprecated as of 8 Mar. 2026, 17:22 UTC">Math PDF Files</button>
+    <a href="websites/old-math-website/"><button id="old-math-website">Recovered Math Website (STYLE WARNING)</button></a>
 
     <h1 style="margin-top: 20pc;">Still can't choose?</h1>
-    <button onclick="iDontKnowWhereToGo()">"I'm feeling lucky!" - Google</button>
+    <button onclick="iDontKnowWhereToGo()">"I'm feeling lucky!" - Google, 1998</button>
     
     <script>
         console.log("Navya is a Bandar!");
@@ -194,7 +205,7 @@
         }
 
        async function iDontKnowWhereToGo() {
-            tableOfURLS = await loadJson('allHTMLPages.json');
+            tableOfURLS = await loadJson('/asset/configuration/htmlPages_main.json');
             const randomUrl = tableOfURLS[Math.floor(Math.random() * tableOfURLS.length)];
             window.open(randomUrl.toString(), "_self");
         }
@@ -202,7 +213,7 @@
     </script>
     <div class="button-brothers">
         <a href="credits/"><button class="small-button">Credits</button></a>
-        <a href="about-the-developer/"><button class="small-button">About the Developer</button></a>
+        <a href="about-developer/"><button class="small-button">About the Developer</button></a>
     </div>
 </body>
 </html>

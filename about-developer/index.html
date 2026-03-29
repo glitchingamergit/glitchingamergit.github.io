@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../asset/src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../asset/src/style.css">
+    <title>About Me</title>
+
+    <style>
+
+        ul {
+            list-style-type: none;
+        }
+
+        .steam-widget {
+            aspect-ratio: 240 / 49;
+        }
+
+        .image-link {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-link:hover {
+            transform: scale(1.1);
+        }
+
+        .image-link:active {
+            transform: scale(0.95);
+        }
+
+        iframe[src*="www.youtube-nocookie.com"] {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        #YouTubeContainer img, #YouTubeContainer p {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: aqua;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <script>if (window.location.href.includes('index.html')) window.open(".", "_self");</script>
+    <button class="top-left-button" onclick="history.back()">Back</button>  
+    <a href="my-portfolio/"><button class="bottom-right-button" style="padding: 10px 15px; font-size: 20px;">My Portfolio</button></a>  
+    <div id="YouTubeContainer">
+        <a id="linkOfAd" href="." target="_self">
+            <img id="imageOfAd" src="../asset/src/favicon.ico" class="image-link" width="50px" style="top: 17px;">
+        </a>
+        <p style="right: 75px;" id="messageOfAd">Home:</p>
+    </div>
+
+    <h1>Hello! I'm not GlitchinGamer!</h1>
+    <h2>I'm a small indie developer who just likes coding some random stuff.</h2>
+    <h2>I learned coding from an organization called <a href="https://www.codeninjas.com/" target="_blank">Code Ninjas</a>!</h2>
+    <br>
+    <h2>I also code with other engines as well! Like working with Unity, Roblox Studio, etc!</h2>
+    <h2>Here is the list of the current programming languages I use or have worked in the past:</h2>
+    <ul>
+        <li><h3>C++</h3></li>
+        <li><h3>C#</h3></li>
+        <li><h3>CSS</h3></li>
+        <li><h3>HTML</h3></li>
+        <li><h3>Java</h3></li>
+        <li><h3>JavaScript</h3></li>
+        <li><h3>Lua</h3></li>
+        <li><h3>Swift</h3></li>
+    </ul>
+    <br>
+    <h2>I also like gaming at times when I have a break,</h2>
+    <h2>Here are my Top 3 favorite Steam games that I like (Not Sponsored):</h2>
+    <div>
+        <iframe src="https://store.steampowered.com/widget/2835570/" frameborder="0" width="960" height="196"></iframe>
+        <iframe src="https://store.steampowered.com/widget/945360/" frameborder="0" width="960" height="196"></iframe>
+        <iframe src="https://store.steampowered.com/widget/3431040/" frameborder="0" width="960" height="196"></iframe>
+    </div>
+    <div>
+        <div>
+            <p>I also play <a href="https://www.minecraft.net/en-us/about-minecraft/" target="_blank">Minecraft</a> (Java Edition)!</p>
+            <a href="https://www.minecraft.net/en-us/about-minecraft/" target="_blank"><img class="image-link" src="Resources/GrassBlock.webp" alt="Minecraft Grass Block Image" width="200"></a>
+        </div>
+        <div>
+            <h3>Here are my favorite Resource Packs:</h2>
+            <div>
+                <a href="https://modrinth.com/resourcepack/ore-outlines" target="_blank"><button>Ore Outline</button></a>
+                <a href="https://www.curseforge.com/minecraft/texture-packs/hoppers" target="_blank"><button>Better Hoppers</button></a>
+                <a href="https://modrinth.com/resourcepack/fullbright-ub" target="_blank"><button>Fullbright</button></a>
+                <a href="https://www.curseforge.com/minecraft/texture-packs/xray-ultimate-1-11-compatible" target="_blank"><button>X-Ray</button></a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h3>My cousin owns a <a href="https://www.youtube.com/channel/UCLtI0J3tg9nhRMOFRbIp3MQ?sub_confirmation=1">YouTube Channel</a> where he given me permission to make the website out of it!</h3>
+    <p>(I may be in some videos in the channel)</p>
+    <h3>Here's the <a id="latestVideoLink" href="https://www.youtube.com/channel/UCLtI0J3tg9nhRMOFRbIp3MQ/videos" target="_blank">latest video</a>:</h3>
+    <iframe src="" id="latestVideoEmbed" frameborder="0" allowfullscreen></iframe>
+    <script src="scripts/apiYouTube.js"></script>
+    <script src="scripts/advertCorner.js"></script>
+</body>
+</html>

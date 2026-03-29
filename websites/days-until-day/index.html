@@ -12,7 +12,7 @@
 
     <style>
 
-        input {
+        input, select {
             font-size: 40px;
             padding: 0.6%;
             height: 50%;
@@ -28,7 +28,7 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            input {
+            input, select {
                 background-color: rgb(30, 30, 30);
                 color: white;
             }
@@ -37,11 +37,26 @@
     </style>
 </head>
 <body>
-    <a href="../../"><button class="top-left-button">Back</button></a>
+    <button class="top-left-button" onclick="history.back()">Back</button>
     <h1>Please type below to get the number of days from date:</h1>
     <h1 id="output">ERROR?</h1>
     
-    <input class="indent TopIndent" type="number" placeholder="Month*" id="mm" min="1" max="2">
+    <select id="mm" name="Month">
+        <option value="" disabled selected hidden>Month*</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+
     <input class="indent TopIndent" type="number" placeholder="Day*" id="dd" min="1" max="2">
     <input class="indent TopIndent" type="text" placeholder="Year" id="yy">
     <input class="indent TopIndent" type="text" placeholder="Name" id="label" max="10">

@@ -4,7 +4,7 @@ const output = document.getElementById("output");
 
 async function loadSites() {
     try {
-        const response = await fetch('sites.json');
+        const response = await fetch('../../asset/configuration/sites_generator.json');
         if (!response.ok) throw Error(response.status);
 
         tableOfSites = await response.json();

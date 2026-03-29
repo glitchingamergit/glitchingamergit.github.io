@@ -39,15 +39,16 @@
     </style>
 </head>
 <body>
-    <a href="../"><button class="top-left-button">Back</button></a>
+    <button class="top-left-button" onclick="history.back()">Back</button>
     <h1>Please put the link of a website below:</h1>
+    <p><strong>Hint:</strong> You can also use the Enter/Return Key!</p>
     <input id="linkValue" type="url" placeholder="Ex: https://www.example.com/">
     <br>
     <button onclick="OpenWebsiteWindow()">Open</button>
 
     <h2 style="margin-top: 10pc;">How it works:</h2>
     <p>It makes a separate window of the website that can put on the box above!</p>
-    <p>Example for <a href="#" onclick="OpenWebsiteWindow('https://www.google.com')" target="_self">Google.com</a>:</p>
+    <p>Example for <a href="javascript:void(0)" onclick="OpenWebsiteWindow('https://www.google.com')" target="_self">Google.com</a>:</p>
 
     <picture>
         <source srcset="Resources/open_link_ex_dark.png" media="(prefers-color-scheme: dark)">

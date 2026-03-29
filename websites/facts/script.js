@@ -280,12 +280,11 @@ function getFact(initString) {
         formattedHtml = `<p>${formattedHtml.trim()}</p>`;
     }
 
-    console.log(formattedHtml);
     output.innerHTML = formattedHtml;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    tableOfRandom.factsOfThings.amendments = await loadJson("AmendmentWordings.json");
+    tableOfRandom.factsOfThings.amendments = await loadJson("../../asset/configuration/amendment_wordings_facts.json");
 
     const args = window.location.search;
     const searchParams = new URLSearchParams(args);
