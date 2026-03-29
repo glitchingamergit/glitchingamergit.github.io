@@ -1,17 +1,9 @@
 [
-    "websites/compliments-and-insults/index.html",
-    "websites/facts/index.html",
-    "websites/generator/index.html",
-    "websites/old-math-website/index.html",
+    "websites/compliments-and-insults/",
+    "websites/facts/",
+    "websites/generator/",
+    "websites/old-math-website/",
     "websites/old-math-website/Resources/Images/7thGrade/seven.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.1-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.2-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.3-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.4-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.5-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.6-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.7-Links-and-Videos.html",
-    "websites/old-math-website/Resources/Images/7thGrade/Websites/7.8-Links-and-Videos.html",
-    "websites/recover-links/index.html",
-    "websites/soundboard/index.html"
+    "websites/recover-links/",
+    "websites/soundboard/"
 ]
