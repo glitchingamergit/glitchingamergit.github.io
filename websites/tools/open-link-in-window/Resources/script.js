@@ -26,7 +26,7 @@ function OpenWebsiteWindow(urlToOpen) {
 
     urlToOpen = formatUrl(urlToOpen);
 
-    var newWindow = window.open(urlToOpen, "_blank", "width=1250,height=1000,resizable=yes,scrollbars=yes,status=yes");
+    var newWindow = window.open(urlToOpen, "_blank", "width=1250,height=1000,resizable=yes,scrollbars=no,status=yes");
     
     if (newWindow) {
         newWindow.focus();
