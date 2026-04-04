@@ -30,7 +30,6 @@ function OpenWebsiteWindow(urlToOpen) {
     
     if (newWindow) {
         newWindow.focus();
-        window.close();
     }
 
     linkValue.value = "";
@@ -41,3 +40,10 @@ window.addEventListener("keypress", function(event){
         OpenWebsiteWindow();
     }
 });
+
+const searchParams = new URLSearchParams(window.location.search);
+
+if (searchParams.get('link').toLowerCase()) {
+    OpenWebsiteWindow(searchParams.get('link').toString().toLowerCase());
+    window.close();
+}
