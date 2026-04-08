@@ -189,6 +189,18 @@
             case "tool":
             case "tools":
                 window.open("./websites/tools", "_self");
+                break;
+            case "window-open":
+                if (urlParams.get('link') !== null) {
+                    var newWindow = window.open(urlParams.get('link'), "_blank", "width=1250,height=1000,resizable=yes,scrollbars=no,status=yes");
+                    
+                    if (newWindow) {
+                        newWindow.focus();
+                    }
+                }
+
+                window.open(".", "_self");
+                break;
         }
 
         let tableOfURLS = [];
@@ -204,7 +216,7 @@
             }
         }
 
-       async function iDontKnowWhereToGo() {
+        async function iDontKnowWhereToGo() {
             tableOfURLS = await loadJson('/asset/configuration/htmlPages_main.json');
             const randomUrl = tableOfURLS[Math.floor(Math.random() * tableOfURLS.length)];
             window.open(randomUrl.toString(), "_self");

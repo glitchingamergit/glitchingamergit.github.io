@@ -24,6 +24,19 @@
             box-sizing: border-box;
         }
 
+        .img-link {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-link:hover {
+            transform: scale(1.1);
+        }
+
+        .img-link:active {
+            transform: scale(0.95);
+        }
+
         input:focus, textarea:focus, select:focus {
             outline: none;
             box-shadow: none;
@@ -40,8 +53,8 @@
 </head>
 <body>
     <button class="top-left-button" onclick="history.back()">Back</button>
-    <h1>Please put the link of a website below:</h1>
-    <p><strong>Hint:</strong> You can also use the Enter/Return Key!</p>
+    <h1 id="title">Please put the link of a website below:</h1>
+    <p><strong>Hint:</strong> You can also use the Enter/Return Key! (If you're trying to make your own link, click <a href="#make-your-own">here</a>)</p>
     <input id="linkValue" type="url" placeholder="Ex: https://www.example.com/">
     <br>
     <button onclick="OpenWebsiteWindow()">Open</button>
@@ -56,6 +69,17 @@
     </picture>
 
     <h3>In my opinion, it's best used for Google Meet meetings!</h3>
+    <br>
+    <h2><strong>Make your own link!</strong></h2>
+    <p id="make-your-own">
+    This can make you a formatted link for you <br>
+    to save and use it later! (Enter/Return will not work here)!</p>
+    <input id="makeYourOwnURL" type="url" placeholder="Put link in box, then click here -->">
+    <img src="Resources/checkmark.png" alt="format link" class="img-link" width="50px" title="Format the link" onclick="FormatLink()">
+    <br>
+        <a href="#title" id="link-url" onclick="copyCommand()"><strong id="link-text">Example Output Text</strong></a>
+        <img src="Resources/copy.png" alt="copy button" width="25px" class="img-link" id="copy" onclick="copyLink()">
+
 
     <script src="Resources/script.js"></script>
 </body>

@@ -63,5 +63,5 @@ function SubmitRequest() {
     getCountdown(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
 }
 
-// Get the tax day :)
+// Get the number of days until tax day :)
 getCountdown(4, 15, null, "Tax Day");
