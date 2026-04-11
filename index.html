@@ -91,7 +91,7 @@
         console.log("Navya is a Bandar!");
 
         let welcomeText = document.getElementById("welcome");
-        let url = window.location.href;
+        let url = window.location.origin;
 
         if (url != null) {
             if (url.includes("https://")) {
@@ -199,7 +199,7 @@
                     }
                 }
 
-                window.open(".", "_self");
+                window.open("", "_self");
                 break;
         }
 
