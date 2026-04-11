@@ -3,3 +3,4 @@
 _MACOSX/
 *.txt
 .gitignore
+.vscode/
