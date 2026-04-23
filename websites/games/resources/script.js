@@ -1,4 +1,4 @@
-function OpenGame(path, width, height) {
+function OpenGame(path, width, height, shouldRedirect) {
     var win = window.open("", "_blank", `width=${width},height=${height},resizable=yes,scrollbars=no,status=yes`);
 
     var safePath = path.startsWith('/') ? path : '/' + path;
@@ -17,4 +17,42 @@ function OpenGame(path, width, height) {
 
     win.document.body.appendChild(iframe);
     win.focus();
+
+    if (shouldRedirect === true) {
+        window.open(".", "_self");
+    }
+}
+
+const params = new URLSearchParams(window.location.search);
+
+const game = params.get('game')?.toLowerCase();
+// console.log(game);
+
+if (game !== "undefined") {
+    switch (game) {
+        case 'fnae':
+            OpenGame('/websites/games/featured/fnae.html', 1280, 720, true);
+            break;
+        case 'fnaf':
+            OpenGame('/websites/games/featured/fnaf.html', 1280, 720, true);
+            break;
+        case 'granny':
+            OpenGame('/websites/games/featured/granny.html', 1280, 720, true);
+            break;
+        case 'learntofly':
+            OpenGame('/websites/games/featured/learn_to_fly.html', 1280, 720, true);
+            break;
+        case 'run':
+            OpenGame('/websites/games/featured/run_iii.html', 1116, 839, true);
+            break;
+        case 'slope':
+            OpenGame('/websites/games/featured/slope.html', 1280, 720, true);
+            break;
+        case 'tag':
+            OpenGame('/websites/games/featured/tag.html', 1280, 720, true);
+            break;
+        case 'thatsnotmyneighbor':
+            OpenGame('/websites/games/featured/thats_not_my_neighbor.html', 1280, 720, true);
+            break;
+    }
 }

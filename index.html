@@ -122,7 +122,7 @@
             }
         }
         
-        let websiteShortcut = urlParams.get('w');
+        let websiteShortcut = urlParams.get('w')?.toLowerCase();
         if (websiteShortcut != null) websiteShortcut = websiteShortcut.toLowerCase();
 
         // List of shortcuts you can use to access website more easily!
@@ -202,6 +202,11 @@
 
                 window.open("", "_self");
                 break;
+            case "games":
+                if (urlParams.get('game') !== null) {
+                    window.open(`/websites/games/?game=${urlParams.get('game')?.toLowerCase()}`, "_self");
+                    break;
+                }
         }
 
         let tableOfURLS = [];
