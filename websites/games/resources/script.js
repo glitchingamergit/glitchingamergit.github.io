@@ -30,6 +30,9 @@ const game = params.get('game')?.toLowerCase();
 
 if (game !== "undefined") {
     switch (game) {
+        case 'counter':
+            OpenGame('websites/games/ownProjects/Counter/index.html', 1080, 1920);
+            break;
         case 'fnae':
             OpenGame('/websites/games/featured/fnae.html', 1280, 720, true);
             break;
