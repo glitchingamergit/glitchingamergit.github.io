@@ -64,7 +64,7 @@ if (game !== "undefined") {
 }
 
 function DownloadGame(winLink, macLink) {
-    if (navigator.userAgent.toLowerCase().includes('mac')) {
+    if (navigator.userAgent.toLowerCase().includes('mac') || navigator.userAgent.toLowerCase().includes('linux')) {
         const link = document.createElement('a');
         link.href = macLink;
         document.body.appendChild(link);
@@ -76,5 +76,7 @@ function DownloadGame(winLink, macLink) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    } else {
+        alert("We're sorry! But the download needs Windows, MacOS, or Linux to work.")
     }
 }
