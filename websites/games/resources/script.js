@@ -31,7 +31,10 @@ const game = params.get('game')?.toLowerCase();
 if (game !== "undefined") {
     switch (game) {
         case 'counter':
-            OpenGame('websites/games/ownProjects/Counter/index.html', 1080, 1920);
+            OpenGame('websites/games/ownProjects/Counter/index.html', 1080, 1920, true);
+            break;
+        case 'flappybird':
+            OpenGame('websites/games/ownProjects/flappy/index.html', 1280, 720, true);
             break;
         case 'fnae':
             OpenGame('/websites/games/featured/fnae.html', 1280, 720, true);
@@ -57,5 +60,21 @@ if (game !== "undefined") {
         case 'thatsnotmyneighbor':
             OpenGame('/websites/games/featured/thats_not_my_neighbor.html', 1280, 720, true);
             break;
+    }
+}
+
+function DownloadGame(winLink, macLink) {
+    if (navigator.userAgent.toLowerCase().includes('mac')) {
+        const link = document.createElement('a');
+        link.href = macLink;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else if (navigator.userAgent.toLowerCase().includes('windows')) {
+        const link = document.createElement('a');
+        link.href = winLink;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 }
