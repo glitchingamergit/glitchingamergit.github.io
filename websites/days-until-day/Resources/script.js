@@ -1,4 +1,4 @@
-function getCountdown(month, day, year, message) {
+function getCountdown(month, day, year, message, isAuto) {
     month = parseInt(month, 10) - 1; 
     day = parseInt(day, 10);
     
@@ -23,6 +23,7 @@ function getCountdown(month, day, year, message) {
 
     let dateOfDay = new Date(targetYear, month, day);
 
+    // If the date has already passed this year, roll it over to next year
     if (now > dateOfDay && (year === null || year === 0)) {
         dateOfDay.setFullYear(targetYear + 1);
     }
@@ -37,8 +38,9 @@ function getCountdown(month, day, year, message) {
 
     let daysOrDay = days === 1 ? "day" : "days";
     let isOrAre = days === 1 ? "is" : "are";
+    let auto = isAuto ? "Example Output: " : "";
 
-    document.getElementById("output").textContent = "There " + isOrAre + " " + days + " " + daysOrDay + " until " + message + "!";
+    document.getElementById("output").textContent = auto + "There " + isOrAre + " " + days + " " + daysOrDay + " until " + message + "!";
     return days;
 }
 
@@ -63,5 +65,24 @@ function SubmitRequest() {
     getCountdown(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
 }
 
-// Get the number of days until tax day :)
-getCountdown(4, 15, null, "Tax Day");
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1); 
+
+const currentYear = today.getFullYear();
+requestedYear.value = tomorrow.getFullYear(); 
+requestedYear.min = currentYear;
+
+requestedYear.oninput = function() {
+    if (requestedYear.value < currentYear && requestedYear.value !== "") {
+        requestedYear.value = currentYear;
+    }
+};
+
+requestedMonth.options[tomorrow.getMonth() + 1].selected = true;
+requestedDay.value = tomorrow.getDate();
+
+requestedName.value = "Tomorrow";
+
+// Get the days until Tax Day! :)
+getCountdown(4, 15, null, "Tax Day", true);

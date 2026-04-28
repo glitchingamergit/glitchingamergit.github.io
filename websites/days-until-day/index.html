@@ -13,10 +13,10 @@
     <style>
 
         input, select {
-            font-size: 40px;
+            font-size: 20px;
             padding: 0.6%;
             height: 50%;
-            width: 12.5%;
+            width: 200px;
             text-align: center;
             border: none;
             border-radius: 7px;
@@ -41,7 +41,7 @@
     <h1>Please type below to get the number of days from date:</h1>
     <h1 id="output">ERROR?</h1>
     
-    <select id="mm" name="Month">
+    <select id="mm" name="Month" style="width: 200px; font-size: 20px;">
         <option value="" disabled selected hidden>Month*</option>
         <option value="01">January</option>
         <option value="02">February</option>
@@ -57,8 +57,8 @@
         <option value="12">December</option>
     </select>
 
-    <input class="indent TopIndent" type="number" placeholder="Day*" id="dd" min="1" max="2">
-    <input class="indent TopIndent" type="text" placeholder="Year" id="yy">
+    <input class="indent TopIndent" type="number" placeholder="Day*" id="dd" value="1" min="1" max="31" oninput="if(this.value > 31) this.value = 31;">
+    <input class="indent TopIndent" type="number" placeholder="Year" id="yy">
     <input class="indent TopIndent" type="text" placeholder="Name" id="label" max="10">
 
     <br>
