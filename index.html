@@ -78,8 +78,8 @@
     <a href="./websites/generator/"><button id="random">Website Generator</button></a>
 
     <h1 style="margin-top: 5pc;">Also see:</h1>
-    <a href="./websites/games/"><button id="game">Games</button></a>
-    <a href="./websites/tools/"><button id="tool">Tools</button></a>
+    <a href="./games/"><button id="game">Games</button></a>
+    <a href="./tools/"><button id="tool">Tools</button></a>
 
     <h1 style="margin-top: 5pc;">Old/Deprecated:</h1>
     <button disabled id="pdf" title="Deprecated as of 8 Mar. 2026, 17:22 UTC">Math PDF Files</button>
@@ -200,7 +200,7 @@
                     }
                 }
 
-                window.open("", "_self");
+                window.open(".", "_self");
                 break;
             case "games":
                 if (urlParams.get('game') !== null) {
