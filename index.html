@@ -189,7 +189,7 @@
                 break;
             case "tool":
             case "tools":
-                window.open("./websites/tools", "_self");
+                window.open("./tools", "_self");
                 break;
             case "window-open":
                 if (urlParams.get('link') !== null) {
@@ -200,11 +200,11 @@
                     }
                 }
 
-                window.open(".", "_self");
+                window.open("./tools/open-link-in-window#make-your-own", "_self");
                 break;
             case "games":
                 if (urlParams.get('game') !== null) {
-                    window.open(`/websites/games/?game=${urlParams.get('game')?.toLowerCase()}`, "_self");
+                    window.open(`/games/?game=${urlParams.get('game')?.toLowerCase()}`, "_self");
                     break;
                 }
         }

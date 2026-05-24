@@ -23,7 +23,6 @@ function getCountdown(month, day, year, message, isAuto) {
 
     let dateOfDay = new Date(targetYear, month, day);
 
-    // If the date has already passed this year, roll it over to next year
     if (now > dateOfDay && (year === null || year === 0)) {
         dateOfDay.setFullYear(targetYear + 1);
     }
@@ -41,6 +40,51 @@ function getCountdown(month, day, year, message, isAuto) {
     let auto = isAuto ? "Example Output: " : "";
 
     document.getElementById("output").textContent = auto + "There " + isOrAre + " " + days + " " + daysOrDay + " until " + message + "!";
+    return days;
+}
+
+function getNumberOfDaysSinceDate(month, day, year, message, isAuto) {
+    month = parseInt(month, 10) - 1;
+    day = parseInt(day, 10);
+    
+    year = year ? parseInt(year, 10) : null;
+
+    if (!message) {
+        message = "the Unknown Day";
+    }
+
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    
+    let targetYear;
+    if (year === null || year === 0) {
+        targetYear = now.getFullYear();
+    } else if (year > now.getFullYear()) {
+        document.getElementById("output").textContent = "Please pick a past year!";
+        return null;
+    } else {
+        targetYear = year;
+    }
+
+    let pastDate = new Date(targetYear, month, day);
+
+    if (now < pastDate && (year === null || year === 0)) {
+        pastDate.setFullYear(targetYear - 1);
+    }
+
+    const diff = now - pastDate; 
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24)); 
+
+    if (days === 0) {
+        document.getElementById("output").textContent = "Today is " + message + "!";
+        return 0;
+    }
+
+    let daysOrDay = days === 1 ? "day" : "days";
+    let isOrAre = days === 1 ? "is" : "are";
+    let auto = isAuto ? "Example Output: " : "";
+
+    document.getElementById("output").textContent = auto + "It has been " + days + " " + daysOrDay + " since " + message + "!";
     return days;
 }
 
@@ -62,7 +106,20 @@ function SubmitRequest() {
         return;
     }
 
-    getCountdown(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    
+    const reqYear = requestedYear.value ? parseInt(requestedYear.value, 10) : now.getFullYear();
+    const reqMonth = parseInt(requestedMonth.value, 10) - 1;
+    const reqDay = parseInt(requestedDay.value, 10);
+
+    const checkDate = new Date(reqYear, reqMonth, reqDay);
+
+    if (requestedYear.value && checkDate < now) {
+        getNumberOfDaysSinceDate(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
+    } else {
+        getCountdown(requestedMonth.value, requestedDay.value, requestedYear.value, requestedName.value);
+    }
 }
 
 const today = new Date();
@@ -72,12 +129,6 @@ tomorrow.setDate(today.getDate() + 1);
 const currentYear = today.getFullYear();
 requestedYear.value = tomorrow.getFullYear(); 
 requestedYear.min = currentYear;
-
-requestedYear.oninput = function() {
-    if (requestedYear.value < currentYear && requestedYear.value !== "") {
-        requestedYear.value = currentYear;
-    }
-};
 
 requestedMonth.options[tomorrow.getMonth() + 1].selected = true;
 requestedDay.value = tomorrow.getDate();
